@@ -1,0 +1,11 @@
+1,seed_pgbench,14.14
+1,seed_shop,12.83
+1,dump_globals,0.02
+1,dump_custom,8.14
+1,basebackup,27.26
+1,verify_base,10.25
+1,restore_globals,0.02
+1,restore_custom,22.97
+1,analyze_after,8.87
+1,restore_unpack,8.41
+1,restore_start,2.02

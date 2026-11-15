@@ -1,0 +1,45 @@
+=== run 1 of 1 ===
+pg_ctl: directory "/var/tmp/ttr/data" does not exist
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+2000000 of 2000000 tuples (100%) done (elapsed 1.34 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 2.09 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 1.36 s, vacuum 0.16 s, primary keys 0.56 s).
+1,seed_pgbench,2.10
+ setseed 
+---------
+ 
+(1 row)
+
+1,seed_shop,15.28
+503 MB
+1,dump_globals,0.02
+1,dump_custom,3.62
+1,basebackup,8.33
+backup successfully verified
+1,verify_base,2.53
+73M	base
+4.0K	globals.sql
+32M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+globals restored; expected errors: 1
+1,restore_globals,0.02
+1,restore_custom,3.31
+1,analyze_after,1.17
+--- /var/tmp/ttr/fp/original.txt	2026-11-15 02:59:08.409201444 +0000
++++ /var/tmp/ttr/fp/logical.txt	2026-11-15 02:59:30.349202228 +0000
+@@ -1,6 +1,6 @@
+ Output format is unaligned.
+ table customers rows=200000 md5=b543a45c10799774ebe6bcb1511c7fed
+-table monthly_revenue rows=20 md5=681916d34a89a791e0cbc2b2082e5c70
++table monthly_revenue rows=20 md5=cdd1739c33eaa385b11c126bcda8578b
+ table orders rows=1000000 md5=4666d70293bfc31b71fca02f3a8ff2f5
+ table pgbench_accounts rows=2000000 md5=e1e777dbcfe88b603cdd7f380a5f3b3f
+ table pgbench_branches rows=20 md5=f70b21d71fc13b1898699238f65166be
+VERIFY logical: DIFFERENT

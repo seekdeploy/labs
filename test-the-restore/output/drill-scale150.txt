@@ -1,0 +1,46 @@
+=== run 1 of 1 ===
+pg_ctl: PID file "/var/tmp/ttr/data/postmaster.pid" does not exist
+Is server running?
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+7846900 of 15000000 tuples (52%) done (elapsed 5.00 s, remaining 4.56 s)
+14577400 of 15000000 tuples (97%) done (elapsed 10.00 s, remaining 0.29 s)
+15000000 of 15000000 tuples (100%) done (elapsed 10.79 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 14.13 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 10.87 s, vacuum 0.17 s, primary keys 3.09 s).
+1,seed_pgbench,14.14
+ setseed 
+---------
+ 
+(1 row)
+
+1,seed_shop,12.83
+2447 MB
+1,dump_globals,0.02
+1,dump_custom,8.14
+1,basebackup,27.26
+backup successfully verified
+1,verify_base,10.25
+179M	base
+4.0K	globals.sql
+67M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+globals restored; expected errors: 1
+1,restore_globals,0.02
+1,restore_custom,22.97
+1,analyze_after,8.87
+VERIFY logical: identical (25 facts checked)
+VERIFY logical: monthly_revenue matches its query (refreshed by pg_restore)
+original.txt:table monthly_revenue rows=20 md5=681916d34a89a791e0cbc2b2082e5c70
+logical.txt:table monthly_revenue rows=20 md5=cdd1739c33eaa385b11c126bcda8578b
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+1,restore_unpack,8.41
+1,restore_start,2.02
+VERIFY physical: identical (26 facts checked)
+timings in /var/tmp/ttr/timings.csv

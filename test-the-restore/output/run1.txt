@@ -1,0 +1,31 @@
+=== run 1 of 1 ===
+pg_ctl: directory "/var/tmp/ttr/data" does not exist
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+2000000 of 2000000 tuples (100%) done (elapsed 1.37 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 2.13 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 1.40 s, vacuum 0.17 s, primary keys 0.57 s).
+1,seed_pgbench,2.14
+ setseed 
+---------
+ 
+(1 row)
+
+1,seed_shop,15.84
+503 MB
+1,dump_globals,0.03
+1,dump_custom,3.72
+1,basebackup,8.69
+backup successfully verified
+1,verify_base,2.38
+73M	base
+4.0K	globals.sql
+32M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+psql:/var/tmp/ttr/backups/globals.sql:20: ERROR:  role "postgres" already exists

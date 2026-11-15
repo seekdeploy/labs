@@ -1,0 +1,125 @@
+=== run 1 of 3 ===
+pg_ctl: directory "/var/tmp/ttr/data" does not exist
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+2000000 of 2000000 tuples (100%) done (elapsed 1.30 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 2.01 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 1.32 s, vacuum 0.17 s, primary keys 0.51 s).
+1,seed_pgbench,2.02
+ setseed 
+---------
+ 
+(1 row)
+
+1,seed_shop,15.17
+503 MB
+1,dump_globals,0.02
+1,dump_custom,3.72
+1,basebackup,8.48
+backup successfully verified
+1,verify_base,2.80
+73M	base
+4.0K	globals.sql
+32M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+globals restored; expected errors: 1
+1,restore_globals,0.02
+1,restore_custom,3.13
+1,analyze_after,1.13
+VERIFY logical: identical (25 facts checked)
+VERIFY logical: monthly_revenue matches its query (refreshed by pg_restore)
+original.txt:table monthly_revenue rows=20 md5=681916d34a89a791e0cbc2b2082e5c70
+logical.txt:table monthly_revenue rows=20 md5=cdd1739c33eaa385b11c126bcda8578b
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+1,restore_unpack,2.60
+1,restore_start,0.72
+VERIFY physical: identical (26 facts checked)
+=== run 2 of 3 ===
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+2000000 of 2000000 tuples (100%) done (elapsed 1.15 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 1.83 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 1.17 s, vacuum 0.17 s, primary keys 0.49 s).
+2,seed_pgbench,1.84
+ setseed 
+---------
+ 
+(1 row)
+
+2,seed_shop,14.67
+503 MB
+2,dump_globals,0.02
+2,dump_custom,3.75
+2,basebackup,8.59
+backup successfully verified
+2,verify_base,2.81
+73M	base
+4.0K	globals.sql
+32M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+globals restored; expected errors: 1
+2,restore_globals,0.04
+2,restore_custom,3.09
+2,analyze_after,0.99
+VERIFY logical: identical (25 facts checked)
+VERIFY logical: monthly_revenue matches its query (refreshed by pg_restore)
+original.txt:table monthly_revenue rows=20 md5=681916d34a89a791e0cbc2b2082e5c70
+logical.txt:table monthly_revenue rows=20 md5=cdd1739c33eaa385b11c126bcda8578b
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+2,restore_unpack,2.47
+2,restore_start,0.82
+VERIFY physical: identical (26 facts checked)
+=== run 3 of 3 ===
+dropping old tables...
+NOTICE:  table "pgbench_accounts" does not exist, skipping
+NOTICE:  table "pgbench_branches" does not exist, skipping
+NOTICE:  table "pgbench_history" does not exist, skipping
+NOTICE:  table "pgbench_tellers" does not exist, skipping
+creating tables...
+generating data (client-side)...
+2000000 of 2000000 tuples (100%) done (elapsed 1.31 s, remaining 0.00 s)
+vacuuming...
+creating primary keys...
+done in 2.00 s (drop tables 0.00 s, create tables 0.00 s, client-side generate 1.32 s, vacuum 0.16 s, primary keys 0.51 s).
+3,seed_pgbench,2.01
+ setseed 
+---------
+ 
+(1 row)
+
+3,seed_shop,15.18
+503 MB
+3,dump_globals,0.02
+3,dump_custom,3.66
+3,basebackup,8.61
+backup successfully verified
+3,verify_base,2.74
+73M	base
+4.0K	globals.sql
+32M	shop.dump
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+globals restored; expected errors: 1
+3,restore_globals,0.02
+3,restore_custom,3.15
+3,analyze_after,0.98
+VERIFY logical: identical (25 facts checked)
+VERIFY logical: monthly_revenue matches its query (refreshed by pg_restore)
+original.txt:table monthly_revenue rows=20 md5=681916d34a89a791e0cbc2b2082e5c70
+logical.txt:table monthly_revenue rows=20 md5=cdd1739c33eaa385b11c126bcda8578b
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+3,restore_unpack,2.43
+3,restore_start,0.72
+VERIFY physical: identical (26 facts checked)
+timings in /var/tmp/ttr/timings.csv
