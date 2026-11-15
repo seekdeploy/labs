@@ -243,7 +243,7 @@ usage 0, limit_remaining 50
 
 Final diff (`final.diff` in this folder): 9 lines added, 1 deleted, across `tabulate/__init__.py` and `test/test_output.py`. It stays local; nothing was sent upstream.
 
-**End of session: 03:36 UTC.** About 20 minutes from the first key check to the reviewed fix, 15 of them waiting on two runs that ended in token limits.
+**End of session: 03:36 UTC.** About 24 minutes from the first key check (03:12) to the reviewed fix; about 19 from the start of the first Aider run (03:16:49). About 12 minutes of that went on runs 3 and 4 alone.
 
 ## What broke
 
