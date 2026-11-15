@@ -1,36 +1,49 @@
 # Run log: agent-lab-notebook
 
-- **Writer:** Idris Okonjo (house byline; the work was done by an AI agent, Claude in Claude Code 2.1.325)
+- **Writer:** Idris Okonjo
 - **Started:** 2026-11-15
-- **Environment:** Anthropic-hosted cloud container, Ubuntu 24.04.5 LTS, x86_64, 4 vCPUs, 15 GiB RAM
-- **Versions:** git 2.43.0, Claude Code 2.1.325. No other tools: the build is Markdown only.
+- **Environment:** cloud container, Ubuntu 24.04.5 LTS, x86_64, 4 vCPUs, 15 GiB RAM, outbound network through an allowlisting proxy
+- **Versions:** Aider 0.86.2 on Python 3.12 (system default is 3.13.18), git 2.43.0, pytest from the python-tabulate dev install
+- **Model:** `openrouter/cohere/north-mini-code:free` via OpenRouter
 
 ## Log
 
-### 2026-11-15 ~03:00: clone the repo and start from the template
+The session itself is logged entry by entry in [EXAMPLE-LOG.md](EXAMPLE-LOG.md).
+This file covers setup and housekeeping.
 
-```text
-$ git clone --depth 1 https://github.com/seekdeploy/labs /home/user/labs
-Cloning into '/home/user/labs'...
-$ ls -A /home/user/labs/_template
-README.md
-RUN-LOG.md
-```
+### 2026-11-15 03:12: key and budget check
 
-I wrote `TEMPLATE.md`, then filled it in as `EXAMPLE-LOG.md` from the session's
-own record: tool output, commit history and session metadata. Entries before
-this point were written from that record afterwards, not live. That's a weakness
-the template warns against ("fill it in as you go").
+`curl -s https://openrouter.ai/api/v1/key` reported usage 0 of a $50 monthly
+limit, on the free tier. That means free models only.
+
+### 2026-11-15 03:13 to 03:14: installing Aider
+
+The first install on Python 3.13 failed (see the log, entry 03:13). Rebuilt the venv on `python3.12`.
+
+### Header fields
+
+The session header's version, model and repo fields were written as
+placeholders at the start and filled in from the entries at 03:36, once known.
+Everything under "Entries" was written as it happened.
 
 ### Signups
 
-None. No accounts were created for this build.
+None. No new accounts were created. The OpenRouter key was already configured
+in the environment.
+
+### Spend
+
+$0.00. Free model, four runs. Key usage was 0 before and after.
+
+### Cleanup
+
+Nothing was left running. Aider ran one-shot (`--message`) each time. The
+tabulate clone and the venvs were only ever in local scratch directories.
 
 ## What broke
 
-Nothing broke in building this folder. The failures during the session it
-documents are in [EXAMPLE-LOG.md](EXAMPLE-LOG.md#what-broke).
+All of it is in [EXAMPLE-LOG.md](EXAMPLE-LOG.md#what-broke). Nothing extra broke in packaging this folder.
 
 ## Screenshots
 
-None. Everything here is text.
+None. Terminal output is included as text.
