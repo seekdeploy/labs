@@ -1,0 +1,15 @@
+$ curl -X POST /api/v1/repos/migrate -d '{"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-anon","repo_owner":"tobias","service":"gitlab","mirror":false,"issues":true,"pull_requests":true,"labels":true,"milestones":true,"releases":true,"wiki":true,"lfs":false}'   # attempt 2, after CA fix
+{"message":"The repository with the same name already exists.","url":"http://127.0.0.1:3000/api/swagger"}
+HTTP 409
+elapsed=0s
+{'full_name': 'tobias/eclint-anon', 'empty': True, 'mirror': False, 'size': 27, 'default_branch': 'main'}
+DELETE 204
+$ (attempt 3) POST /api/v1/repos/migrate same body
+elapsed=12s
+--- after attempt 3:
+{"id":2,"owner":{"id":1,"login":"tobias","login_name":"","source_id":0,"full_name":"","email":"tobias@example.invalid","avatar_url":"http://127.0.0.1:3000/avatars/dc3199607793504f330f64a177223e56","ht
+leftover: {'full_name': 'tobias/eclint-anon', 'empty': False, 'size': 1320, 'default_branch': 'master'}
+branches: ['master', 'feat/crash-on-known-issue', 'feat/zapr', 'chore/x-crypto', 'nancy-v0.3', 'go-cmd', 'perfs']
+DELETE 204
+$ (attempt 4) labels=false milestones=false: {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-anon","repo_owner":"tobias","service":"gitlab","issues":true,"pull_requests":true,"labels":false,"milestones":false,"releases":true,"wiki":true}
+elapsed=1500s

@@ -1,0 +1,20 @@
+2026-11-15T03:11:33.5988253Z lab-runner(version:v6.0.0)
+2026-11-15T03:11:33.5988441Z ::group::Runner Information
+2026-11-15T03:11:33.5988469Z Runner labels: lab
+2026-11-15T03:11:33.5988476Z Task: 3
+2026-11-15T03:11:33.5988482Z Job: test
+2026-11-15T03:11:33.5988488Z Repository: tobias/actions-offline
+2026-11-15T03:11:33.5988496Z Triggered by event: push
+2026-11-15T03:11:33.5988502Z ::endgroup::
+2026-11-15T03:11:33.5988512Z ::group::Operating System
+2026-11-15T03:11:33.5988528Z Ubuntu 24.04.5 LTS
+2026-11-15T03:11:33.5988531Z linux/amd64
+2026-11-15T03:11:33.5988536Z ::endgroup::
+2026-11-15T03:11:33.5992297Z workflow prepared
+2026-11-15T03:11:33.5997004Z Prepare all required actions
+2026-11-15T03:11:33.6018769Z Failed to download action 'https://codeload.github.com/actions/checkout/tar.gz/11d5960a326750d5838078e36cf38b85af677262'. Error: Get "https://codeload.github.com/actions/checkout/tar.gz/11d5960a326750d5838078e36cf38b85af677262": proxyconnect tcp: dial tcp 127.0.0.1:9: connect: connection refused. Back off 26s before retry.
+2026-11-15T03:11:59.6027517Z Failed to download action 'https://codeload.github.com/actions/checkout/tar.gz/11d5960a326750d5838078e36cf38b85af677262'. Error: Get "https://codeload.github.com/actions/checkout/tar.gz/11d5960a326750d5838078e36cf38b85af677262": proxyconnect tcp: dial tcp 127.0.0.1:9: connect: connection refused. Back off 27s before retry.
+2026-11-15T03:12:26.6415538Z ##[error]git clone --no-checkout https://github.com/actions/checkout /home/git/.cache/act/9b1f56994fdd0345b4e28439d9608975c1c1e413de8df94ad05115f669654d01/git: exit status 128: Cloning into '/home/git/.cache/act/9b1f56994fdd0345b4e28439d9608975c1c1e413de8df94ad05115f669654d01/git'...%0Afatal: unable to access 'https://github.com/actions/checkout/': Failed to connect to 127.0.0.1 port 9 after 0 ms: Couldn't connect to server
+2026-11-15T03:12:26.6417650Z Cleaning up container for job test
+2026-11-15T03:12:26.6433471Z Job failed
+2026-11-15T03:12:26.6433836Z git clone --no-checkout https://github.com/actions/checkout /home/git/.cache/act/9b1f56994fdd0345b4e28439d9608975c1c1e413de8df94ad05115f669654d01/git: exit status 128: Cloning into '/home/git/.cache/act/9b1f56994fdd0345b4e28439d9608975c1c1e413de8df94ad05115f669654d01/git'...\nfatal: unable to access 'https://github.com/actions/checkout/': Failed to connect to 127.0.0.1 port 9 after 0 ms: Couldn't connect to server

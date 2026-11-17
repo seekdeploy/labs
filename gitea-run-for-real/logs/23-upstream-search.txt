@@ -1,0 +1,26 @@
+== gitlab migration 401
+total 8
+#401 [closed] 2016-12-16 [API] Issues are missing `HTMLURL`, `IssueURL`, and `PRURL`
+#3217 [open] 2017-12-17 Confidential (private) issues on public repo
+#24174 [open] 2023-04-17 Container registry cannot be set to private
+#35885 [closed] 2025-11-06 Migration of Releases containing .hex files
+#35136 [closed] 2025-07-21 Git tag name too long for DB
+#31861 [closed] 2024-08-18 Builtin Container Registry: Manifests 404 Not Found
+== gitlab migrate Unauthorized
+total 4
+#24174 [open] 2023-04-17 Container registry cannot be set to private
+#31861 [closed] 2024-08-18 Builtin Container Registry: Manifests 404 Not Found
+#5603 [closed] 2018-12-27 API privacy / security - organization endpoints can be accessed without an access token
+#12779 [closed] 2020-09-09 gitlab migration: fals token error is not reported
+== gitlab migration token milestones
+total 12
+#29286 [open] 2024-02-20 Store access token for migration
+#3217 [open] 2017-12-17 Confidential (private) issues on public repo
+#2569 [closed] 2017-09-22 feature, bulk importing of repositories
+#30731 [closed] 2024-04-27 Release: Publish Gitea 1.22
+#27174 [closed] 2023-09-21 Activity Page not showing for all repos.
+#17039 [closed] 2021-09-14 [Migration from Gitlab] Incorrect release name leads to full migration failure
+== gitlab migration releases hang
+total 2
+#4898 [open] 2018-09-09 Add inline comments on commits
+#31600 [closed] 2024-07-09 PR Diff View takes a very long time to load: failed to run attr-check: context deadline exceeded

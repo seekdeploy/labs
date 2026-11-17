@@ -1,0 +1,4 @@
+$ (attempt 6) 03:40:30 {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-noreleases","repo_owner":"tobias","service":"gitlab","issues":true,"pull_requests":true,"labels":false,"milestones":false,"releases":false,"wiki":true}
+{"message":"error while listing comments: 15130865 GET https://gitlab.com/api/v4/projects/15130865/issues/1/discussions: 401 {message: 401 Unauthorized}","url":"http://127.0.0.1:3000/api/swagger"}
+HTTP 500
+elapsed=15s

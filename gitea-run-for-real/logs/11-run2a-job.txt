@@ -1,0 +1,20 @@
+2026-11-15T03:10:04.5445268Z lab-runner(version:v6.0.0)
+2026-11-15T03:10:04.5445633Z ::group::Runner Information
+2026-11-15T03:10:04.5445790Z Runner labels: lab
+2026-11-15T03:10:04.5445803Z Task: 2
+2026-11-15T03:10:04.5445813Z Job: test
+2026-11-15T03:10:04.5445824Z Repository: tobias/actions-offline
+2026-11-15T03:10:04.5445971Z Triggered by event: workflow_dispatch
+2026-11-15T03:10:04.5445986Z ::endgroup::
+2026-11-15T03:10:04.5446005Z ::group::Operating System
+2026-11-15T03:10:04.5446037Z Ubuntu 24.04.5 LTS
+2026-11-15T03:10:04.5446050Z linux/amd64
+2026-11-15T03:10:04.5446059Z ::endgroup::
+2026-11-15T03:10:04.5451733Z workflow prepared
+2026-11-15T03:10:04.5458370Z Prepare all required actions
+2026-11-15T03:10:04.5481724Z Failed to download action 'https://codeload.github.com/actions/checkout/tar.gz/v4'. Error: Get "https://codeload.github.com/actions/checkout/tar.gz/v4": proxyconnect tcp: dial tcp 127.0.0.1:9: connect: connection refused. Back off 24s before retry.
+2026-11-15T03:10:28.5489641Z Failed to download action 'https://codeload.github.com/actions/checkout/tar.gz/v4'. Error: Get "https://codeload.github.com/actions/checkout/tar.gz/v4": proxyconnect tcp: dial tcp 127.0.0.1:9: connect: connection refused. Back off 25s before retry.
+2026-11-15T03:10:53.5659811Z ##[error]git -C /home/git/.cache/act/b085c58ac6c17c6eea920c6dc2f09006d40552f2a8822f42b4fa2ca870a525ef/git fetch --force --no-prune --depth 1 --no-tags origin +v4:refs/runner/8e38a1ea5c681c8e9a08f1af465f1f07d33d931de8f71af45ecbe957751c9a86: exit status 128: fatal: unable to access 'https://github.com/actions/checkout/': Failed to connect to 127.0.0.1 port 9 after 0 ms: Couldn't connect to server
+2026-11-15T03:10:53.5661781Z Cleaning up container for job test
+2026-11-15T03:10:53.5676885Z Job failed
+2026-11-15T03:10:53.5677095Z git -C /home/git/.cache/act/b085c58ac6c17c6eea920c6dc2f09006d40552f2a8822f42b4fa2ca870a525ef/git fetch --force --no-prune --depth 1 --no-tags origin +v4:refs/runner/8e38a1ea5c681c8e9a08f1af465f1f07d33d931de8f71af45ecbe957751c9a86: exit status 128: fatal: unable to access 'https://github.com/actions/checkout/': Failed to connect to 127.0.0.1 port 9 after 0 ms: Couldn't connect to server

@@ -1,0 +1,8 @@
+name: offline-checkout
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: lab
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls -la && git log --oneline -1

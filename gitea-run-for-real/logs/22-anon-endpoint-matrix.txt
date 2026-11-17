@@ -1,0 +1,8 @@
+issues?per_page=1              200
+issues/1/discussions           401
+issues/1/notes                 401
+merge_requests?per_page=1      200
+merge_requests/1/discussions   401
+releases?per_page=1            200
+labels                         401
+milestones                     401
