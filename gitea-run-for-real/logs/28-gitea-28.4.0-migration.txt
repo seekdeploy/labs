@@ -1,0 +1,10 @@
+# Re-run of test one on Gitea 28.4.0, 2026-11-19 (UTC times)
+$ (A: all items) 20:50:34 POST /api/v1/repos/migrate {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-all","repo_owner":"tobias","service":"gitlab","issues":true,"pull_requests":true,"labels":true,"milestones":true,"releases":true,"wiki":true}
+HTTP 500 elapsed=12s
+{"message":"GET https://gitlab.com/api/v4/projects/15130865/milestones: 401 {message: 401 Unauthorized}","url":"http://127.0.0.1:3001/api/swagger"}
+$ (B: labels and milestones off, releases off) 20:50:46 POST /api/v1/repos/migrate {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-nolabels","repo_owner":"tobias","service":"gitlab","issues":true,"pull_requests":true,"labels":false,"milestones":false,"releases":false,"wiki":true}
+HTTP 500 elapsed=20s
+{"message":"error while listing comments: 15130865 GET https://gitlab.com/api/v4/projects/15130865/issues/1/discussions: 401 {message: 401 Unauthorized}","url":"http://127.0.0.1:3001/api/swagger"}
+leftover eclint-all: {'empty': False, 'size': 1320, 'default_branch': 'master'} HTTP 200
+leftover eclint-nolabels: {'empty': False, 'size': 1320, 'default_branch': 'master'} HTTP 200
+20:51:12 stopped gitea 28.4.0; no git-user processes left

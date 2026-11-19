@@ -14,7 +14,7 @@ says `uses: actions/checkout@v4` when the runner cannot reach github.com?
 
 - Linux x86_64. Run on Ubuntu 24.04.5 LTS in a cloud container, 4 vCPU,
   16 GB RAM.
-- Gitea 1.27.3 and Gitea Runner 6.0.0. Download links and SHA-256 checksums
+- Gitea 1.27.3 and Gitea Runner 6.0.0, plus Gitea 28.4.0 for the 19 Nov re-run of test one. Download links and SHA-256 checksums
   are in [BINARIES.md](BINARIES.md); the binaries are not committed.
 - git 2.43, and Node 22 for the runner's host mode.
 - A non-root user to run Gitea (it refuses to run as root).

@@ -231,3 +231,25 @@ determine its cause and do not have a minimal reproduction.
 user `git`, nothing listening on port 3000 (`27-`). The data under
 `/srv/gitea-run` was left in the throwaway container. The published
 `harness/app.ini` has generated secrets removed.
+
+## Addendum, 2026-11-19: test one re-run on Gitea 28.4.0
+
+1.27.3, used above, was the last of the 1.x line; Gitea moved to 28.0 on
+29 September 2026. In 28.4.0, `services/migrations/gitlab.go` is unchanged
+except for a move from version 2 to version 3 of the GitLab API client
+library, which could change behaviour, so I re-ran test one.
+
+Gitea 28.4.0 (`gitea-28.4.0-linux-amd64`, SHA-256 verified against
+dl.gitea.com), same container, fresh SQLite instance on port 3001 as user
+`git`, no GitLab token. Output in `logs/28-gitea-28.4.0-migration.txt`.
+
+| Options | Result | Time (s) |
+|---|---|---:|
+| All items | HTTP 500: `GET .../milestones: 401 {message: 401 Unauthorized}` | 12 |
+| Labels, milestones, releases off | HTTP 500: `GET .../issues/1/discussions: 401` | 20 |
+
+Both failed migrations again left a non-empty repository behind (size 1320,
+branch `master`). Both findings reproduce on 28.4.0. Test two (Actions) was
+not re-run; `DEFAULT_ACTIONS_URL` still defaults to `github` in 28.4.0's
+`custom/conf/app.example.ini`. Gitea 28.4.0 stopped at 20:51 UTC; no
+processes left.
