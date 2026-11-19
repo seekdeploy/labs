@@ -1,0 +1,2 @@
+474430d53e6264f6d6dd18db42d6dc9df3a1b56ca9e88a325bbf860e1a811d87  dl/nvim.tar.gz
+3f08e63ecd388fff657ad39722f88bb03dcf326f1f2da2700d99e1dc40ab2e8b  dl/hx.tar.xz

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-seekdeploy/d83efe50-55e6-51dc-bd9f-2366fb5ef978/scratchpad/labs/modal-editing-is-a-grammar/run.py", line 16, in <module>
+    from tasks import TASKS, keystrokes
+ModuleNotFoundError: No module named 'tasks'
