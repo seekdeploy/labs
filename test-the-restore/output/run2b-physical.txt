@@ -1,0 +1,7 @@
+wiped: ls: cannot access '/var/tmp/ttr/data': No such file or directory
+1,restore_unpack,2.29
+1,restore_start,0.82
+VERIFY physical: identical (26 facts checked)
+--- physical restore:
+matview_stored   681916d34a89a791e0cbc2b2082e5c70
+matview_query_now cdd1739c33eaa385b11c126bcda8578b
