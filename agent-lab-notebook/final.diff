@@ -1,0 +1,31 @@
+diff --git a/tabulate/__init__.py b/tabulate/__init__.py
+index 12a2950..9cde7db 100644
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -2488,6 +2488,8 @@ def _expand_iterable(original, num_desired, default):
+     length `num_desired` completely populated with `default will be returned
+     """
+     if isinstance(original, Iterable) and not isinstance(original, str):
++        # Convert to list to allow concatenation with list
++        original = list(original)
+         return original + [default] * (num_desired - len(original))
+     else:
+         return [default] * num_desired
+diff --git a/test/test_output.py b/test/test_output.py
+index ea3da87..a25d89b 100644
+--- a/test/test_output.py
++++ b/test/test_output.py
+@@ -2927,6 +2927,13 @@ def test_colalign_multi_with_sep_line():
+     assert_equal(expected, result)
+ 
+ 
++def test_rowalign_tuple():
++    "Output: rowalign as a tuple"
++    result = tabulate([[1, 2], [3, 4]], rowalign=("top", "bottom"))
++    expected = "-  -\n1  2\n3  4\n-  -"
++    assert_equal(expected, result)
++
++
+ def test_column_global_and_specific_alignment():
+     """Test `colglobalalign` and `"global"` parameter for `colalign`."""
+     table = [[1, 2, 3, 4], [111, 222, 333, 444]]
