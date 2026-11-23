@@ -1,0 +1,50 @@
+{
+  "servers": 200,
+  "servers_with_tools": 199,
+  "tools": 8229,
+  "tools_per_server_median": 11,
+  "desc_chars": {
+    "median": 142,
+    "p90": 509,
+    "max": 7088,
+    "empty": 1,
+    "under_40": 1315
+  },
+  "server_est_tokens": {
+    "median": 2044,
+    "p90": 14264,
+    "max": 196019,
+    "over_10k": 25
+  },
+  "servers_asking_credentials": 22,
+  "servers_requiring_credentials": 3,
+  "servers_with_capability": {
+    "delete": 23,
+    "send": 38,
+    "pay": 26,
+    "execute": 15,
+    "write": 45
+  },
+  "tools_with_capability": {
+    "delete": 65,
+    "send": 193,
+    "pay": 103,
+    "execute": 47,
+    "write": 327
+  },
+  "servers_with_steering": {
+    "imperative": 33,
+    "priority": 19,
+    "concealment": 4,
+    "override": 4,
+    "context_request": 7
+  },
+  "tools_with_steering": {
+    "imperative": 108,
+    "priority": 27,
+    "concealment": 5,
+    "override": 8,
+    "context_request": 11
+  },
+  "matches": 190
+}
