@@ -1,0 +1,9 @@
+{
+  "name": "agents-md-experiment",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "node-llama-cpp": "3.22.3"
+  }
+}
