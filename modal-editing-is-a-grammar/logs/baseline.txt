@@ -1,0 +1,2 @@
+t0-noop nvim correct=20/20 median=0.0199s min=0.0098s max=0.0243s
+t0-noop hx   correct=20/20 median=0.0688s min=0.0191s max=0.0811s
