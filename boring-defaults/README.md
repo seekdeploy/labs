@@ -34,8 +34,9 @@ env $ENVS PATH="$H/.local/share/nvim/mason/bin:$PWD/nvim/bin:$PATH" PARSER_SRC="
 
 ## What broke
 
-- **Treesitter parsers could not download** in this sandbox (HTTP 403 from the
-  proxy for GitHub archive tarballs), so all 27 were missing. Not worked around.
+- **Treesitter parsers could not download** on my test machine (HTTP 403 from
+  its proxy for GitHub archive tarballs), so all 27 were missing in the main
+  measurement. The second measurement fetched them with git clone instead.
 - **First-start errors were truncated** in popups; a headless install printed them in full.
 - **Installing parsers from git clones took three tries:** an override wiped by
   nvim-treesitter's reload, a race with LazyVim's own install, and a folder I
