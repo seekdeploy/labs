@@ -1,0 +1,11 @@
+--- cargo build --message-format=json (no Cargo.toml)
+error: could not find `Cargo.toml` in `/tmp/tmp.KwvJTtl7KI` or any parent directory
+exit 101
+--- npm run tset --json (stdout only)
+{
+  "error": {
+    "summary": "Missing script: \"tset\"\n\nDid you mean this?\n  npm set # Set a value in the npm configuration\n\nTo see a list of scripts, run:\n  npm run",
+    "detail": ""
+  }
+}
+exit 1

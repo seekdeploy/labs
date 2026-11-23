@@ -1,0 +1,17 @@
+git-no-upstream          exit=128 RESOLVED  R1:'git help config'->128; R2:'git push --set-upstream origin feat'->0
+git-no-identity          exit=128 RESOLVED (placeholder)  R2:'git config --global user.email "you@example.com"'->0
+git-typo                 exit=1   RESOLVED  R1:'git --help'->1; R3:'git status'->0
+git-bad-pathspec         exit=1   no-candidate  
+git-dirty-merge          exit=1   no-candidate  
+git-push-behind          exit=1   tried  R1:'git pull'->1; R1:'git push --help'->1
+npm-missing-script       exit=1   tried  R1:'tset'->1; R2:'npm set'->1; R2:'npm run'->1
+python-nameerror         exit=1   RESOLVED  R3:"python3 -c 'print(1)'"->0
+python-missing-module    exit=1   tried  R2:'import sklearn'->1
+pip-externally-managed   exit=1   no-candidate  
+cargo-no-manifest        exit=101 no-candidate  
+curl-bad-host            exit=56  no-candidate  
+jq-index-number          exit=5   no-candidate  
+grep-bad-regex           exit=2   no-candidate  
+tar-missing-file         exit=2   no-candidate  
+docker-no-daemon         exit=1   no-candidate  
+make-no-makefile         exit=2   no-candidate  

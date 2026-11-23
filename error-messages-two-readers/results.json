@@ -1,0 +1,270 @@
+[
+  {
+    "id": "git-no-upstream",
+    "cli": "git",
+    "cmd": "git push",
+    "exit": 128,
+    "message": "fatal: The current branch feat has no upstream branch.\nTo push the current branch and set the remote as upstream, use\n\n    git push --set-upstream origin feat\n\nTo have this happen automatically for branches without a tracking\nupstream, see 'push.autoSetupRemote' in 'git help config'.",
+    "attempts": [
+      {
+        "rule": "R1",
+        "candidate": "git help config",
+        "exit": 128,
+        "candidate_exit": 0,
+        "candidate_output": "This system has been minimized by removing packages and content that are\nnot required on a system that users do not log into.\n\nTo restore this content, including manpages, you can run the 'unminimize'\ncommand. You will still need to ensure the 'man-db' package is installed.",
+        "placeholder": false,
+        "after": "fatal: The current branch feat has no upstream branch.\nTo push the current branch and set the remote as upstream, use\n\n    git push --set-upstream origin feat\n\nTo have this happen automatically for branches without a tracking\nupstream, see 'push.autoSetupRemote' in 'git help config'."
+      },
+      {
+        "rule": "R2",
+        "candidate": "git push --set-upstream origin feat",
+        "exit": 0,
+        "candidate_exit": 0,
+        "candidate_output": "To /tmp/err-9rac6b5t/remote.git\n * [new branch]      feat -> feat\nbranch 'feat' set up to track 'origin/feat'.",
+        "placeholder": false,
+        "after": "Everything up-to-date"
+      }
+    ],
+    "resolved": true
+  },
+  {
+    "id": "git-no-identity",
+    "cli": "git",
+    "cmd": "git commit -qm x",
+    "exit": 128,
+    "message": "Author identity unknown\n\n*** Please tell me who you are.\n\nRun\n\n  git config --global user.email \"you@example.com\"\n  git config --global user.name \"Your Name\"\n\nto set your account's default identity.\nOmit --global to set the identity only in this repository.\n\nfatal: unable to auto-detect email address (got 'root@vm.(none)')",
+    "attempts": [
+      {
+        "rule": "R2",
+        "candidate": "git config --global user.email \"you@example.com\"",
+        "exit": 0,
+        "candidate_exit": 0,
+        "candidate_output": "",
+        "placeholder": true,
+        "after": ""
+      }
+    ],
+    "resolved": true
+  },
+  {
+    "id": "git-typo",
+    "cli": "git",
+    "cmd": "git stauts",
+    "exit": 1,
+    "message": "git: 'stauts' is not a git command. See 'git --help'.\n\nThe most similar command is\n\tstatus",
+    "attempts": [
+      {
+        "rule": "R1",
+        "candidate": "git --help",
+        "exit": 1,
+        "candidate_exit": 0,
+        "candidate_output": "usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one",
+        "placeholder": false,
+        "after": "git: 'stauts' is not a git command. See 'git --help'.\n\nThe most similar command is\n\tstatus"
+      },
+      {
+        "rule": "R3",
+        "candidate": "git status",
+        "exit": 0,
+        "candidate_exit": 0,
+        "candidate_output": "On branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)",
+        "placeholder": false,
+        "after": "On branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)"
+      }
+    ],
+    "resolved": true
+  },
+  {
+    "id": "git-bad-pathspec",
+    "cli": "git",
+    "cmd": "git checkout no-such-branch",
+    "exit": 1,
+    "message": "error: pathspec 'no-such-branch' did not match any file(s) known to git",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "git-dirty-merge",
+    "cli": "git",
+    "cmd": "git merge other",
+    "exit": 1,
+    "message": "error: Your local changes to the following files would be overwritten by merge:\n\tf\nPlease commit your changes or stash them before you merge.\nAborting\nUpdating cb871de..5635c24",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "git-push-behind",
+    "cli": "git",
+    "cmd": "git push",
+    "exit": 1,
+    "message": "To /tmp/err-e45j3qoe/remote.git\n ! [rejected]        master -> master (fetch first)\nerror: failed to push some refs to '/tmp/err-e45j3qoe/remote.git'\nhint: Updates were rejected because the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+    "attempts": [
+      {
+        "rule": "R1",
+        "candidate": "git pull",
+        "exit": 1,
+        "candidate_exit": 128,
+        "candidate_output": "From /tmp/err-e45j3qoe/remote\n * [new branch]      master     -> origin/master\nhint: You have divergent branches and need to specify how to reconcile them.\nhint: You can do so by running one of the following commands sometime before\nhint: your next pull:\nhint: \nhint:   git config pull.rebase false  # merge\nhint:   git config pull.rebase true   # rebase\nhint:   git config pull.ff only       # fast-forward only\nhint: \nhint: You can replace \"git config\" with \"git config --global\" to set a default\nhint: preference for all repositories. You can also pass --rebase, --no-rebase,\nhint: or --ff-only on",
+        "placeholder": false,
+        "after": "To /tmp/err-e45j3qoe/remote.git\n ! [rejected]        master -> master (non-fast-forward)\nerror: failed to push some refs to '/tmp/err-e45j3qoe/remote.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git p"
+      },
+      {
+        "rule": "R1",
+        "candidate": "git push --help",
+        "exit": 1,
+        "candidate_exit": 0,
+        "candidate_output": "This system has been minimized by removing packages and content that are\nnot required on a system that users do not log into.\n\nTo restore this content, including manpages, you can run the 'unminimize'\ncommand. You will still need to ensure the 'man-db' package is installed.",
+        "placeholder": false,
+        "after": "To /tmp/err-e45j3qoe/remote.git\n ! [rejected]        master -> master (non-fast-forward)\nerror: failed to push some refs to '/tmp/err-e45j3qoe/remote.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git p"
+      }
+    ],
+    "resolved": false
+  },
+  {
+    "id": "npm-missing-script",
+    "cli": "npm",
+    "cmd": "npm run tset",
+    "exit": 1,
+    "message": "npm error Missing script: \"tset\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm set # Set a value in the npm configuration\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /tmp/err-nimblfkw/.npm/_logs/2026-11-23T15_21_23_411Z-debug-0.log",
+    "attempts": [
+      {
+        "rule": "R1",
+        "candidate": "tset",
+        "exit": 1,
+        "candidate_exit": 10,
+        "candidate_output": "tset: terminal attributes: No such device or address",
+        "placeholder": false,
+        "after": "npm error Missing script: \"tset\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm set # Set a value in the npm configuration\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /tmp/err-nimblfkw/.npm/_logs/2026-11-23T15_21_23_894Z-debug-0.log"
+      },
+      {
+        "rule": "R2",
+        "candidate": "npm set",
+        "exit": 1,
+        "candidate_exit": 1,
+        "candidate_output": "npm error code EUSAGE\nnpm error\nnpm error Set a value in the npm configuration\nnpm error\nnpm error Usage:\nnpm error npm set <key>=<value> [<key>=<value> ...] (See `npm config`)\nnpm error\nnpm error Options:\nnpm error [-g|--global] [-L|--location <global|user|project>]\nnpm error\nnpm error Run \"npm help set\" for more info\nnpm error A complete log of this run can be found in: /tmp/err-nimblfkw/.npm/_logs/2026-11-23T15_21_23_999Z-debug-0.log",
+        "placeholder": false,
+        "after": "npm error Missing script: \"tset\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm set # Set a value in the npm configuration\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /tmp/err-nimblfkw/.npm/_logs/2026-11-23T15_21_24_097Z-debug-0.log"
+      },
+      {
+        "rule": "R2",
+        "candidate": "npm run",
+        "exit": 1,
+        "candidate_exit": 0,
+        "candidate_output": "Lifecycle scripts included in x@1.0.0:\n  test\n    echo ok",
+        "placeholder": false,
+        "after": "npm error Missing script: \"tset\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm set # Set a value in the npm configuration\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /tmp/err-nimblfkw/.npm/_logs/2026-11-23T15_21_24_307Z-debug-0.log"
+      }
+    ],
+    "resolved": false
+  },
+  {
+    "id": "python-nameerror",
+    "cli": "python3",
+    "cmd": "python3 -c 'prnt(1)'",
+    "exit": 1,
+    "message": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    prnt(1)\n    ^^^^\nNameError: name 'prnt' is not defined. Did you mean: 'print'?",
+    "attempts": [
+      {
+        "rule": "R3",
+        "candidate": "python3 -c 'print(1)'",
+        "exit": 0,
+        "candidate_exit": 0,
+        "candidate_output": "1",
+        "placeholder": false,
+        "after": "1"
+      }
+    ],
+    "resolved": true
+  },
+  {
+    "id": "python-missing-module",
+    "cli": "python3",
+    "cmd": "python3 -c 'import sklearn'",
+    "exit": 1,
+    "message": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sklearn\nModuleNotFoundError: No module named 'sklearn'",
+    "attempts": [
+      {
+        "rule": "R2",
+        "candidate": "import sklearn",
+        "exit": 1,
+        "candidate_exit": 1,
+        "candidate_output": "import-im6.q16: unable to open X server `' @ error/import.c/ImportImageCommand/346.",
+        "placeholder": false,
+        "after": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sklearn\nModuleNotFoundError: No module named 'sklearn'"
+      }
+    ],
+    "resolved": false
+  },
+  {
+    "id": "pip-externally-managed",
+    "cli": "pip (python3.12)",
+    "cmd": "python3.12 -m pip install --dry-run six",
+    "exit": 1,
+    "message": "error: externally-managed-environment\n\n\u00d7 This environment is externally managed\n\u2570\u2500> To install Python packages system-wide, try apt install\n    python3-xyz, where xyz is the package you are trying to\n    install.\n    \n    If you wish to install a non-Debian-packaged Python package,\n    create a virtual environment using python3 -m venv path/to/venv.\n    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make\n    sure you have python3-full installed.\n    \n    If you wish to install a non-Debian packaged Python application,\n    it may be easiest to use pipx install xyz, which will manage a\n    virtual environment for you. Make sure you have pipx installed.\n    \n    See /usr/share/doc/python3.12/README.venv for more information.\n\nnote: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.\nhint: See PEP 668 for the detailed specification.",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "cargo-no-manifest",
+    "cli": "cargo",
+    "cmd": "cargo build",
+    "exit": 101,
+    "message": "error: could not find `Cargo.toml` in `/tmp/err-03b50lrb` or any parent directory",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "curl-bad-host",
+    "cli": "curl",
+    "cmd": "curl -sS https://no-such-host.invalid/",
+    "exit": 56,
+    "message": "curl: (56) CONNECT tunnel failed, response 502",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "jq-index-number",
+    "cli": "jq",
+    "cmd": "echo 1 | jq .foo",
+    "exit": 5,
+    "message": "jq: error (at <stdin>:1): Cannot index number with string \"foo\"",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "grep-bad-regex",
+    "cli": "grep",
+    "cmd": "grep -E 'round(' f",
+    "exit": 2,
+    "message": "grep: Unmatched ( or \\(",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "tar-missing-file",
+    "cli": "tar",
+    "cmd": "tar -xf missing.tar",
+    "exit": 2,
+    "message": "tar: missing.tar: Cannot open: No such file or directory\ntar: Error is not recoverable: exiting now",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "docker-no-daemon",
+    "cli": "docker",
+    "cmd": "docker ps",
+    "exit": 1,
+    "message": "failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory",
+    "attempts": [],
+    "resolved": false
+  },
+  {
+    "id": "make-no-makefile",
+    "cli": "make",
+    "cmd": "make",
+    "exit": 2,
+    "message": "make: *** No targets specified and no makefile found.  Stop.",
+    "attempts": [],
+    "resolved": false
+  }
+]
