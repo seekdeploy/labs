@@ -1,0 +1,5 @@
+[nvim-treesitter/install/dtd]: Compiling parser
+[nvim-treesitter/install/dtd]: Installing parser
+[nvim-treesitter/install/dtd]: Language installed
+[nvim-treesitter]: Installed 1/1 languages
+install returned true

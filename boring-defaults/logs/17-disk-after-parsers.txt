@@ -1,0 +1,5 @@
+== 2026-11-23 17:38 UTC after first start + parsers
+195M	~/.local/share/nvim
+123M	~/.local/share/nvim/lazy
+64M	~/.local/share/nvim/mason
+8.6M	~/.local/share/nvim/site

@@ -22,6 +22,14 @@ mkdir -p nvim && tar -xzf nvim.tar.gz -C nvim --strip-components=1
 mkdir -p work/proj && printf 'def total(items):\n    return sum(i.price for i in items)\n' > work/proj/app.py
 ./install.sh "$PWD/nvim/bin/nvim" "$PWD/work"   # clean install into work/home
 ./startup.sh "$PWD/nvim/bin" "$PWD/work" 10     # bare vs LazyVim startup, 10 runs each
+
+# Second measurement, outside LazyVim's defaults: parsers fetched with git clone
+H="$PWD/work/home"; ENVS="HOME=$H XDG_CONFIG_HOME=$H/.config XDG_DATA_HOME=$H/.local/share XDG_STATE_HOME=$H/.local/state XDG_CACHE_HOME=$H/.cache"
+env $ENVS PATH="$PWD/nvim/bin:$PATH" nvim --headless "+lua require('lazy').load({plugins={'nvim-treesitter'}})" "+luafile dump-parsers.lua" +qa | grep '^\[' > parsers.json
+./clone-parsers.sh parsers.json "$PWD/work/parser-src"
+env $ENVS PATH="$H/.local/share/nvim/mason/bin:$PWD/nvim/bin:$PATH" PARSER_SRC="$PWD/work/parser-src" PARSERS_JSON=logs/parsers-with-deps.json \
+  nvim --headless -u NONE --cmd "set rtp+=$H/.local/share/nvim/lazy/nvim-treesitter" "+luafile install-parsers-local.lua" +qa
+./startup-ab.sh "$PWD/nvim/bin" "$PWD/work" 10  # parsers missing vs present, interleaved
 ```
 
 ## What broke
@@ -29,6 +37,9 @@ mkdir -p work/proj && printf 'def total(items):\n    return sum(i.price for i in
 - **Treesitter parsers could not download** in this sandbox (HTTP 403 from the
   proxy for GitHub archive tarballs), so all 27 were missing. Not worked around.
 - **First-start errors were truncated** in popups; a headless install printed them in full.
+- **Installing parsers from git clones took three tries:** an override wiped by
+  nvim-treesitter's reload, a race with LazyVim's own install, and a folder I
+  nested by mistake. With them installed, startup was slower (167 vs 124 ms median).
 - **stylua reformatted Lua with tabs** on save while LazyVim indents with two
   spaces, because the starter's `stylua.toml` only covers the config directory.
 
