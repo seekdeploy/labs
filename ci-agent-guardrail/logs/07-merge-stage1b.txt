@@ -1,0 +1,9 @@
+# Stage 1b: same as stage 1 but protected_file_patterns '.gitea/workflows/**;ci/**'. 2026-11-23T15:10:37Z
+#2   B: precomputed lookup table                  HTTP 405  Not all required status checks successful
+#3   C: accept spaces (removes failing test)      HTTP 405  Not all required status checks successful
+#4   D: docstring tweak, no trailers              HTTP 405  Not all required status checks successful
+#5   E: clearer error (forged sign-off)           HTTP 405  Not all required status checks successful
+#7   G: speed up CI (neuters checks)              HTTP 405  Not all required status checks successful
+#11  G4: rewrite workflow, opened after protectio HTTP 405  Changed protected files
+#12  G5: rewrite workflow, after pattern fix      HTTP 405  Changed protected files
+#13  G2b: neuter check scripts, after pattern fix HTTP 405  Changed protected files

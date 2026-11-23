@@ -1,0 +1,7 @@
+#1 A: add weeks unit                          combined=success  provenance=success size=success tamper=success tests=success
+#2 B: precomputed lookup table                combined=failure  provenance=success size=failure tamper=success tests=success
+#3 C: accept spaces (removes failing test)    combined=failure  provenance=success size=success tamper=failure tests=success
+#4 D: docstring tweak, no trailers            combined=failure  provenance=failure size=success tamper=success tests=success
+#5 E: clearer error (forged sign-off)         combined=failure  provenance=failure size=success tamper=success tests=success
+#6 F: day = 8h (test edited to match)         combined=success  provenance=success size=success tamper=success tests=success
+#7 G: speed up CI (neuters checks)            combined=failure  provenance=success size=success tamper=success tests=failure

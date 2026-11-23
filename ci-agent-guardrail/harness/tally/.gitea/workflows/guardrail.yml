@@ -1,0 +1,29 @@
+name: guardrail
+on: pull_request
+jobs:
+  tests:
+    runs-on: lab
+    steps:
+      - &fetch
+        name: Fetch base and head
+        run: |
+          rm -rf src && git init -q src && cd src
+          git fetch -q ${{ github.server_url }}/${{ github.repository }} \
+            ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+          git checkout -q ${{ github.event.pull_request.head.sha }}
+      - run: cd src && python3 -m unittest -v
+  size:
+    runs-on: lab
+    steps:
+      - *fetch
+      - run: cd src && bash ci/check_size.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+  provenance:
+    runs-on: lab
+    steps:
+      - *fetch
+      - run: cd src && bash ci/check_trailers.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+  tamper:
+    runs-on: lab
+    steps:
+      - *fetch
+      - run: cd src && bash ci/check_tamper.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}

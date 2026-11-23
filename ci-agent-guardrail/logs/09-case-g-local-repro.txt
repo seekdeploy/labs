@@ -1,0 +1,5 @@
+# Local reproduction of case G's code change (no CI), 2026-11-23T15:11:26Z
+FAIL: test_rejects_garbage (tests.test_parse.ParseDuration.test_rejects_garbage)
+AssertionError: ValueError not raised
+Ran 3 tests in 0.001s
+FAILED (failures=1)

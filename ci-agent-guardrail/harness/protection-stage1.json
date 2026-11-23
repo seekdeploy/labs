@@ -1,0 +1,13 @@
+{
+  "rule_name": "main",
+  "enable_push": false,
+  "enable_status_check": true,
+  "status_check_contexts": [
+    "guardrail / tests (pull_request)",
+    "guardrail / size (pull_request)",
+    "guardrail / provenance (pull_request)",
+    "guardrail / tamper (pull_request)"
+  ],
+  "protected_file_patterns": ".gitea/workflows/*;ci/*",
+  "required_approvals": 0
+}

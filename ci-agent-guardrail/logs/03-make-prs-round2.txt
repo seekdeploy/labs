@@ -1,0 +1,4 @@
+$ make_prs_round2.sh ... (2026-11-23T15:08:04Z)
+PR #8  E2: forged sign-off plus Assisted-by
+PR #9  G2: neuter check scripts (harmless code change)
+PR #10  G3: rewrite workflow to no-ops

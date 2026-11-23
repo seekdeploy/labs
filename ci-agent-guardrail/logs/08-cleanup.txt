@@ -1,0 +1,1 @@
+2026-11-23T15:10:51Z stopped gitea 28.4.0 and gitea-runner 6.0.0; no processes left for user git
