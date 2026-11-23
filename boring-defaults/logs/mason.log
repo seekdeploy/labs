@@ -1,0 +1,24 @@
+[INFO  Mon Nov 23 15:28:30 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:40: Executing installer for Package(name=tree-sitter-cli) {
+  debug = false,
+  force = false,
+  strict = false
+}
+[INFO  Mon Nov 23 15:28:30 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:40: Executing installer for Package(name=stylua) {
+  debug = false,
+  force = false,
+  strict = false
+}
+[INFO  Mon Nov 23 15:28:30 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:40: Executing installer for Package(name=shfmt) {
+  debug = false,
+  force = false,
+  strict = false
+}
+[INFO  Mon Nov 23 15:28:31 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:93: Installation succeeded for Package(name=shfmt)
+[INFO  Mon Nov 23 15:28:31 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:93: Installation succeeded for Package(name=tree-sitter-cli)
+[INFO  Mon Nov 23 15:28:32 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:93: Installation succeeded for Package(name=stylua)
+[INFO  Mon Nov 23 15:28:50 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:40: Executing installer for Package(name=lua-language-server) {
+  debug = false,
+  force = false,
+  strict = false
+}
+[INFO  Mon Nov 23 15:28:52 2026] ...zy/mason.nvim/lua/mason-core/installer/InstallRunner.lua:93: Installation succeeded for Package(name=lua-language-server)

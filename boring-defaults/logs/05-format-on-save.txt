@@ -1,0 +1,17 @@
+== before
+local   x={1,2,  3}
+local function f( a,b ) return a+b end
+== after :w in LazyVim (no config changes)
+local x = { 1, 2, 3 }
+local function f(a, b)
+	return a + b
+end
+== diff
+1,2c1,4
+< local   x={1,2,  3}
+< local function f( a,b ) return a+b end
+---
+> local x = { 1, 2, 3 }
+> local function f(a, b)
+> 	return a + b
+> end

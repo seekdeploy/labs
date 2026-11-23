@@ -1,0 +1,58 @@
+== starter files
+./.gitignore
+./.neoconf.json
+./LICENSE
+./README.md
+./init.lua
+./lazy-lock.json
+./lua/config/autocmds.lua
+./lua/config/keymaps.lua
+./lua/config/lazy.lua
+./lua/config/options.lua
+./lua/plugins/example.lua
+./stylua.toml
+
+   2 ./init.lua
+   8 ./lua/config/autocmds.lua
+   3 ./lua/config/keymaps.lua
+  53 ./lua/config/lazy.lua
+   3 ./lua/config/options.lua
+ 197 ./lua/plugins/example.lua
+ 266 total
+== plugins installed: 32
+LazyVim
+blink.cmp
+bufferline.nvim
+catppuccin
+conform.nvim
+flash.nvim
+friendly-snippets
+gitsigns.nvim
+grug-far.nvim
+lazy.nvim
+lazydev.nvim
+lualine.nvim
+mason-lspconfig.nvim
+mason.nvim
+mini.ai
+mini.icons
+mini.pairs
+noice.nvim
+nui.nvim
+nvim-lint
+nvim-lspconfig
+nvim-treesitter
+nvim-treesitter-textobjects
+nvim-ts-autotag
+persistence.nvim
+plenary.nvim
+snacks.nvim
+todo-comments.nvim
+tokyonight.nvim
+trouble.nvim
+ts-comments.nvim
+which-key.nvim
+== disk
+162M	/tmp/claude-0/-home-user-seekdeploy/d83efe50-55e6-51dc-bd9f-2366fb5ef978/scratchpad/lazyvim-work/home/.local/share/nvim
+76K	/tmp/claude-0/-home-user-seekdeploy/d83efe50-55e6-51dc-bd9f-2366fb5ef978/scratchpad/lazyvim-work/home/.config/nvim
+== lazy-lock.json entries: 32

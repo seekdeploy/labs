@@ -1,0 +1,48 @@
+2026-11-23 15:28 UTC
+== nvim: NVIM v0.12.6
+== step 1: clone the starter
+Cloning into '/tmp/claude-0/-home-user-seekdeploy/d83efe50-55e6-51dc-bd9f-2366fb5ef978/scratchpad/lazyvim-work/home/.config/nvim'...
+== starter commit: 803bc18
+== step 2: remove the starter's .git
+== step 3: first start, headless sync
+[35m[plenary.nvim] [0m[36m  status[0m[90m | [0m[34mRunning task status[0m
+[35m[which-key.nvim] [0m[36mstatus[0m[90m | [0m[34mFinished task status in 11ms[0m
+[35m[which-key.nvim] [0m[36mcheckout[0m[90m | [0m[34mRunning task checkout[0m
+[35m[which-key.nvim] [0m[36mcheckout[0m[90m | [0m[34mFinished task checkout in 1ms[0m
+[35m[todo-comments.nvim] [0m[36mstatus[0m[90m | [0m[34mFinished task status in 13ms[0m
+[35m[nvim-lint] [0m[36m     status[0m[90m | [0m[34mFinished task status in 14ms[0m
+[35m[nvim-lint] [0m[36m   checkout[0m[90m | [0m[34mRunning task checkout[0m
+[35m[nvim-lint] [0m[36m   checkout[0m[90m | [0m[34mFinished task checkout in 0ms[0m
+[35m[todo-comments.nvim] [0m[36mcheckout[0m[90m | [0m[34mRunning task checkout[0m
+[35m[todo-comments.nvim] [0m[36mcheckout[0m[90m | [0m[34mFinished task checkout in 1ms[0m
+[35m[plenary.nvim] [0m[36m  status[0m[90m | [0m[34mFinished task status in 16ms[0m
+[35m[plenary.nvim] [0m[36mcheckout[0m[90m | [0m[34mRunning task checkout[0m
+[35m[plenary.nvim] [0m[36mcheckout[0m[90m | [0m[34mFinished task checkout in 1ms[0m
+[35m[snacks.nvim] [0m[36m   status[0m[90m | [0m[34mFinished task status in 87ms[0m
+[35m[snacks.nvim] [0m[36m checkout[0m[90m | [0m[34mRunning task checkout[0m
+[35m[snacks.nvim] [0m[36m checkout[0m[90m | [0m[34mFinished task checkout in 1ms[0m
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0mNote: switching to 'tags/v16.0.2'.
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+You are in 'detached HEAD' state. You can look around, make experimental
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0mchanges and commit them, and you can discard any commits you make in this
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0mstate without impacting any branches by switching back to a branch.
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+If you want to create a new branch to retain commits you create, you may
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0mdo so (now or later) by using -c with the switch command. Example:
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+  git switch -c <new-branch-name>
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+Or undo this operation with:
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+  git switch -
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+Turn off this advice by setting config variable advice.detachedHead to false
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m
+HEAD is now at 0fa4a847 chore(main): release 16.0.2 (#7290)
+[35m[LazyVim] [0m[36m     checkout[0m[90m | [0m[34mFinished task checkout in 494ms[0m
+[35m[LazyVim] [0m[36m         docs[0m[90m | [0m[34mRunning task docs[0m
+[35m[LazyVim] [0m[36m         docs[0m[90m | [0m
+[35m[LazyVim] [0m[36m         docs[0m[90m | [0m[34mFinished task docs in 1ms[0m
+[35m[LazyVim] [0m[36m          log[0m[90m | [0m[34mRunning task log[0m
+[35m[LazyVim] [0m[36m          log[0m[90m | [0m[34mFinished task log in 13ms[0m
+== sync took 8s
