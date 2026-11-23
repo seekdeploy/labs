@@ -1,0 +1,10 @@
+$ (attempt 7: eclint, code+wiki only) 03:42:48 {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-code","repo_owner":"tobias","service":"gitlab","issues":false,"pull_requests":false,"labels":false,"milestones":false,"releases":false,"wiki":true}
+HTTP 201 elapsed=3s
+$ (attempt 8: minecraft-launcher-lib, releases only (29 releases, 0 asset links)) 03:42:51 {"clone_addr":"https://gitlab.com/JakobDev/minecraft-launcher-lib","repo_name":"mll-releases","repo_owner":"tobias","service":"gitlab","issues":false,"pull_requests":false,"labels":false,"milestones":false,"releases":true,"wiki":true}
+HTTP 201 elapsed=3s
+eclint-code: {'size': 1320, 'release_counter': 0, 'default_branch': 'master'}
+  branches=7 tags=X-Total-Count
+58
+mll-releases: {'size': 375, 'release_counter': 29, 'default_branch': 'master'}
+  branches=2 tags=X-Total-Count
+29

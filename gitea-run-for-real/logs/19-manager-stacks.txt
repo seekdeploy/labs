@@ -1,0 +1,1281 @@
+Total Number of Goroutines: 73
+Total Number of Processes: 30
+  + PID: 6af9298d	Type: request
+  | Description: HTTP: GET /api/internal/manager/processes?flat=false&no-system=false&stacktraces=true&json=false&cancel-pid=
+  | Start:       2026-11-15 03:39:57.111009947 +0000 UTC m=+664.591919497
+  | Goroutines:
+  |   + Description: gitea.dev/modules/process.(*Manager).ProcessStacktraces.func2
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.goroutineProfileWithLabels
+  |   |   | /usr/local/go/src/runtime/mprof.go:1259
+  |   |   + runtime.pprof_goroutineProfileWithLabels
+  |   |   | /usr/local/go/src/runtime/mprof.go:1250
+  |   |   + runtime/pprof.writeRuntimeProfile
+  |   |   | /usr/local/go/src/runtime/pprof/pprof.go:851
+  |   |   + runtime/pprof.writeGoroutine
+  |   |   | /usr/local/go/src/runtime/pprof/pprof.go:784
+  |   |   + runtime/pprof.(*Profile).WriteTo
+  |   |   | /usr/local/go/src/runtime/pprof/pprof.go:408
+  |   |   + gitea.dev/modules/process.(*Manager).ProcessStacktraces.func2
+  |   |   | /source/modules/process/manager_stacktraces.go:183
+  |   + Description: net/http.(*conn).serve
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.asyncPreempt2
+  |   |   | /usr/local/go/src/runtime/preempt.go:320
+  |   |   + runtime.asyncPreempt
+  |   |   | /usr/local/go/src/runtime/preempt_amd64.s:124
+  |   |   + github.com/google/pprof/profile.Parse
+  |   |   | /go/pkg/mod/github.com/google/pprof@v0.0.0-20260604005048-7023385849c0/profile/profile.go:172
+  |   |   + gitea.dev/modules/process.(*Manager).ProcessStacktraces
+  |   |   | /source/modules/process/manager_stacktraces.go:186
+  |   |   + gitea.dev/routers/private.Processes
+  |   |   | /source/routers/private/manager_process.go:39
+  |   |   + reflect.Value.call
+  |   |   | /usr/local/go/src/reflect/value.go:586
+  |   |   + reflect.Value.Call
+  |   |   | /usr/local/go/src/reflect/value.go:369
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:182
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/private.setRealIP.func1
+  |   |   | /source/routers/private/internal.go:61
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/private.authInternal.func1
+  |   |   | /source/routers/private/internal.go:40
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/private.Routes.PrivateContexter.func2.1
+  |   |   | /source/services/context/private.go:75
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*ChainHandler).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/chain.go:31
+  |   |   + github.com/go-chi/chi/v5.(*Mux).routeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:477
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:73
+  |   |   + github.com/go-chi/chi/v5.(*Mux).Mount.func1
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:321
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.MaintenanceModeHandler.func2.1
+  |   |   | /source/routers/common/maintenancemode.go:50
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*ChainHandler).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/chain.go:31
+  |   |   + github.com/go-chi/chi/v5.(*Mux).routeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:477
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web/routing.NewRequestInfoHandler.func1.1
+  |   |   | /source/modules/web/routing/requestinfo.go:40
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ForwardedHeadersHandler.ForwardedHeaders.func1.1
+  |   |   | /go/pkg/mod/github.com/chi-middleware/proxy@v1.1.1/middleware.go:37
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.SecurityHeadersHandler.func3.1
+  |   |   | /source/routers/common/middleware.go:60
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.RequestContextHandler.func2.1
+  |   |   | /source/routers/common/middleware.go:103
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.ChiRoutePathHandler.func1.1
+  |   |   | /source/routers/common/middleware.go:118
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:90
+  |   |   + gitea.dev/modules/web.(*Router).normalizeRequestPath
+  |   |   | /source/modules/web/router.go:280
+  |   |   + gitea.dev/modules/web.(*Router).ServeHTTP
+  |   |   | /source/modules/web/router.go:215
+  |   |   + net/http.serverHandler.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:3311
+  |   |   + net/http.(*conn).serve
+  |   |   | /usr/local/go/src/net/http/server.go:2067
+  | 
+  + PID: 6af9270e	Type: normal
+  | Description: git.Run(by:gitcmd.(*Command).StartWithStderr, repo:.../tobias/eclint-issues.git): /usr/bin/git cat-file --batch-command
+  | Start:       2026-11-15 03:29:18.933776116 +0000 UTC m=+26.414685661
+  | Goroutines:
+  |   + Description: os/exec.(*Cmd).Start.func2
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Read
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:165
+  |   |   + os.(*File).read
+  |   |   | /usr/local/go/src/os/file_posix.go:30
+  |   |   + os.(*File).Read
+  |   |   | /usr/local/go/src/os/file.go:144
+  |   |   + bytes.(*Buffer).ReadFrom
+  |   |   | /usr/local/go/src/bytes/buffer.go:229
+  |   |   + io.copyBuffer
+  |   |   | /usr/local/go/src/io/io.go:415
+  |   |   + io.Copy
+  |   |   | /usr/local/go/src/io/io.go:388
+  |   |   + os.genericWriteTo
+  |   |   | /usr/local/go/src/os/file.go:295
+  |   |   + os.(*File).WriteTo
+  |   |   | /usr/local/go/src/os/file.go:273
+  |   |   + io.copyBuffer
+  |   |   | /usr/local/go/src/io/io.go:411
+  |   |   + io.Copy
+  |   |   | /usr/local/go/src/io/io.go:388
+  |   |   + os/exec.(*Cmd).writerDescriptor.func1
+  |   |   | /usr/local/go/src/os/exec/exec.go:602
+  |   |   + os/exec.(*Cmd).Start.func2
+  |   |   | /usr/local/go/src/os/exec/exec.go:757
+  |   + Description: os/exec.(*Cmd).watchCtx
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + os/exec.(*Cmd).watchCtx
+  |   |   | /usr/local/go/src/os/exec/exec.go:797
+  |   + Description: gitea.dev/modules/git.newCatFileBatch.func2
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + syscall.Syscall6
+  |   |   | /usr/local/go/src/syscall/syscall_linux.go:96
+  |   |   + internal/syscall/unix.Waitid
+  |   |   | /usr/local/go/src/internal/syscall/unix/waitid_linux.go:18
+  |   |   + os.(*Process).pidfdWait.func1
+  |   |   | /usr/local/go/src/os/pidfd_linux.go:108
+  |   |   + os.ignoringEINTR
+  |   |   | /usr/local/go/src/os/file_posix.go:263
+  |   |   + os.(*Process).pidfdWait
+  |   |   | /usr/local/go/src/os/pidfd_linux.go:107
+  |   |   + os.(*Process).wait
+  |   |   | /usr/local/go/src/os/exec_unix.go:25
+  |   |   + os.(*Process).Wait
+  |   |   | /usr/local/go/src/os/exec.go:346
+  |   |   + os/exec.(*Cmd).Wait
+  |   |   | /usr/local/go/src/os/exec/exec.go:930
+  |   |   + gitea.dev/modules/git/gitcmd.(*Command).Wait
+  |   |   | /source/modules/git/gitcmd/command.go:513
+  |   |   + gitea.dev/modules/git/gitcmd.(*Command).WaitWithStderr
+  |   |   | /source/modules/git/gitcmd/command.go:544
+  |   |   + gitea.dev/modules/git.newCatFileBatch.func2
+  |   |   | /source/modules/git/catfile_batch_reader.go:60
+  | 
+  + PID: 6af9270a-3	Type: request
+  | Description: HTTP: POST /api/v1/repos/migrate
+  | Start:       2026-11-15 03:29:14.829065602 +0000 UTC m=+22.309975146
+  | Goroutines:
+  |   + Description: net/http.(*persistConn).readLoop
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Read
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:165
+  |   |   + net.(*netFD).Read
+  |   |   | /usr/local/go/src/net/fd_posix.go:68
+  |   |   + net.(*conn).Read
+  |   |   | /usr/local/go/src/net/net.go:196
+  |   |   + crypto/tls.(*atLeastReader).Read
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:815
+  |   |   + bytes.(*Buffer).ReadFrom
+  |   |   | /usr/local/go/src/bytes/buffer.go:229
+  |   |   + crypto/tls.(*Conn).readFromUntil
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:837
+  |   |   + crypto/tls.(*Conn).readRecordOrCCS
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:626
+  |   |   + crypto/tls.(*Conn).readRecord
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:588
+  |   |   + crypto/tls.(*Conn).Read
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:1393
+  |   |   + net/http.(*persistConn).Read
+  |   |   | /usr/local/go/src/net/http/transport.go:2174
+  |   |   + bufio.(*Reader).fill
+  |   |   | /usr/local/go/src/bufio/bufio.go:113
+  |   |   + bufio.(*Reader).Peek
+  |   |   | /usr/local/go/src/bufio/bufio.go:152
+  |   |   + net/http.(*persistConn).readLoop
+  |   |   | /usr/local/go/src/net/http/transport.go:2330
+  |   + Description: net/http.(*connReader).backgroundRead
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Read
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:165
+  |   |   + net.(*netFD).Read
+  |   |   | /usr/local/go/src/net/fd_posix.go:68
+  |   |   + net.(*conn).Read
+  |   |   | /usr/local/go/src/net/net.go:196
+  |   |   + net/http.(*connReader).backgroundRead
+  |   |   | /usr/local/go/src/net/http/server.go:702
+  |   + Description: net/http.(*persistConn).writeLoop
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + net/http.(*persistConn).writeLoop
+  |   |   | /usr/local/go/src/net/http/transport.go:2652
+  | 
+  + PID: 6af926f6-33	Type: system
+  | Description: Web: Gitea Server
+  | Start:       2026-11-15 03:28:54.729766119 +0000 UTC m=+2.210675676
+  | Goroutines:
+  |   + Description: net/http.(*connReader).backgroundRead
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Read
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:165
+  |   |   + net.(*netFD).Read
+  |   |   | /usr/local/go/src/net/fd_posix.go:68
+  |   |   + net.(*conn).Read
+  |   |   | /usr/local/go/src/net/net.go:196
+  |   |   + net/http.(*connReader).backgroundRead
+  |   |   | /usr/local/go/src/net/http/server.go:702
+  |   + Description: runtime.main
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Accept
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:613
+  |   |   + net.(*netFD).accept
+  |   |   | /usr/local/go/src/net/fd_unix.go:150
+  |   |   + net.(*TCPListener).accept
+  |   |   | /usr/local/go/src/net/tcpsock_posix.go:159
+  |   |   + net.(*TCPListener).AcceptTCP
+  |   |   | /usr/local/go/src/net/tcpsock.go:374
+  |   |   + gitea.dev/modules/graceful.(*wrappedListener).Accept
+  |   |   | /source/modules/graceful/server.go:248
+  |   |   + net/http.(*Server).Serve
+  |   |   | /usr/local/go/src/net/http/server.go:3434
+  |   |   + gitea.dev/modules/graceful.(*Server).Serve
+  |   |   | /source/modules/graceful/server.go:156
+  |   |   + gitea.dev/modules/graceful.(*Server).ListenAndServe
+  |   |   | /source/modules/graceful/server.go:96
+  |   |   + gitea.dev/modules/graceful.HTTPListenAndServe
+  |   |   | /source/modules/graceful/server_http.go:34
+  |   |   + gitea.dev/cmd.runHTTP
+  |   |   | /source/cmd/web_graceful.go:18
+  |   |   + gitea.dev/cmd.listen
+  |   |   | /source/cmd/web.go:345
+  |   |   + gitea.dev/cmd.serveInstalled
+  |   |   | /source/cmd/web.go:229
+  |   |   + gitea.dev/cmd.runWeb
+  |   |   | /source/cmd/web.go:287
+  |   |   + github.com/urfave/cli/v3.(*Command).run
+  |   |   | /go/pkg/mod/github.com/urfave/cli/v3@v3.10.0/command_run.go:382
+  |   |   + github.com/urfave/cli/v3.(*Command).run
+  |   |   | /go/pkg/mod/github.com/urfave/cli/v3@v3.10.0/command_run.go:320
+  |   |   + github.com/urfave/cli/v3.(*Command).Run
+  |   |   | /go/pkg/mod/github.com/urfave/cli/v3@v3.10.0/command_run.go:95
+  |   |   + gitea.dev/cmd.RunMainApp
+  |   |   | /source/cmd/main.go:182
+  |   |   + main.main
+  |   |   | /source/main.go:45
+  |   |   + runtime.main
+  |   |   | /usr/local/go/src/runtime/proc.go:290
+  |   + Description: gitea.dev/modules/graceful.(*Server).awaitShutdown
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/graceful.(*Server).awaitShutdown
+  |   |   | /source/modules/graceful/server_hooks.go:14
+  | 
+  + PID: 6af926f6-28	Type: system
+  | Description: Service: SlowQueryDetector
+  | Start:       2026-11-15 03:28:54.710905627 +0000 UTC m=+2.191815180
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithShutdownContext
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/web/routing.(*loggerRequestManager).startSlowQueryDetector.func1
+  |   |   | /source/modules/web/routing/logger_manager.go:49
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithShutdownContext
+  |   |   | /source/modules/graceful/manager.go:88
+  | 
+  + PID: 6af926f6-23	Type: system
+  | Description: Service: Cron
+  | Start:       2026-11-15 03:28:54.70619346 +0000 UTC m=+2.187103003
+  | 
+  + PID: 6af926f6-22	Type: system
+  | Description: Queue: actions_ready_job
+  | Start:       2026-11-15 03:28:54.641424449 +0000 UTC m=+2.122334005
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-21	Type: system
+  | Description: Service: EventSource
+  | Start:       2026-11-15 03:28:54.614418441 +0000 UTC m=+2.095327975
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithShutdownContext
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/eventsource.(*Manager).Run
+  |   |   | /source/modules/eventsource/manager_run.go:58
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithShutdownContext
+  |   |   | /source/modules/graceful/manager.go:88
+  | 
+  + PID: 6af926f6-19	Type: system
+  | Description: Queue: task
+  | Start:       2026-11-15 03:28:54.610494505 +0000 UTC m=+2.091404039
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueue).PopItem
+  |   |   | /source/modules/queue/base_levelqueue.go:55
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-18	Type: system
+  | Description: Queue: pr_auto_merge
+  | Start:       2026-11-15 03:28:54.610441726 +0000 UTC m=+2.091351261
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.string]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.string]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-17	Type: system
+  | Description: Queue: pr_patch_checker
+  | Start:       2026-11-15 03:28:54.61041109 +0000 UTC m=+2.091320638
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.string]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.string]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-16	Type: system
+  | Description: Queue: webhook_sender
+  | Start:       2026-11-15 03:28:54.60977232 +0000 UTC m=+2.090681857
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.int64]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.int64]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-15	Type: system
+  | Description: Queue: mirror
+  | Start:       2026-11-15 03:28:54.609720205 +0000 UTC m=+2.090629743
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-14	Type: system
+  | Description: Queue: repo_stats_update
+  | Start:       2026-11-15 03:28:54.608947177 +0000 UTC m=+2.089856721
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.int64]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.int64]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: sync.(*WaitGroup).Go.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.int64]).doDispatchBatchToWorker.(*WorkerPoolQueue[go.shape.int64]).doStartNewWorker.func1
+  |   |   | /source/modules/queue/workergroup.go:171
+  |   |   + sync.(*WaitGroup).Go.func1
+  |   |   | /usr/local/go/src/sync/waitgroup.go:258
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-12	Type: system
+  | Description: Service: IssueIndexer
+  | Start:       2026-11-15 03:28:54.608301249 +0000 UTC m=+2.089210790
+  | Goroutines:
+  |   + Description: github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).introducerLoop
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).introducerLoop
+  |   |   | /go/pkg/mod/github.com/blevesearch/bleve/v2@v2.6.0/index/scorch/introducer.go:70
+  |   + Description: github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).mergerLoop
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).mergerLoop
+  |   |   | /go/pkg/mod/github.com/blevesearch/bleve/v2@v2.6.0/index/scorch/merge.go:172
+  |   + Description: github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).persisterLoop
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/blevesearch/bleve/v2/index/scorch.(*Scorch).persisterLoop
+  |   |   | /go/pkg/mod/github.com/blevesearch/bleve/v2@v2.6.0/index/scorch/persister.go:248
+  | Children:
+  |   + PID: 6af926f6-13	Type: system
+  |   | Description: Queue: issue_indexer
+  |   | Start:       2026-11-15 03:28:54.608333071 +0000 UTC m=+2.089242611
+  |   | Goroutines:
+  |   |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | Stack:
+  |   |   |   + runtime.gopark
+  |   |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   |   + runtime.selectgo
+  |   |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   |   | /source/modules/queue/workergroup.go:337
+  |   |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   |   | /source/modules/graceful/manager.go:77
+  |   |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | Stack:
+  |   |   |   + runtime.gopark
+  |   |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   |   + runtime.selectgo
+  |   |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   |   | /source/modules/queue/backoff.go:51
+  |   |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-11	Type: system
+  | Description: Queue: branch_sync
+  | Start:       2026-11-15 03:28:54.608120811 +0000 UTC m=+2.089030363
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-10	Type: system
+  | Description: Queue: push_update
+  | Start:       2026-11-15 03:28:54.607655501 +0000 UTC m=+2.088565064
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.[]*gitea.dev/modules/repository.PushUpdateOptions]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.[]*gitea.dev/modules/repository.PushUpdateOptions]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueue).PopItem
+  |   |   | /source/modules/queue/base_levelqueue.go:55
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-9	Type: system
+  | Description: Queue: repo_license_updater
+  | Start:       2026-11-15 03:28:54.604441258 +0000 UTC m=+2.085350799
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: sync.(*WaitGroup).Go.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doDispatchBatchToWorker.(*WorkerPoolQueue[go.shape.*uint8]).doStartNewWorker.func1
+  |   |   | /source/modules/queue/workergroup.go:171
+  |   |   + sync.(*WaitGroup).Go.func1
+  |   |   | /usr/local/go/src/sync/waitgroup.go:258
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-8	Type: system
+  | Description: Queue: tag_sync
+  | Start:       2026-11-15 03:28:54.602659018 +0000 UTC m=+2.083568566
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-6	Type: system
+  | Description: Queue: repo-archive
+  | Start:       2026-11-15 03:28:54.438835708 +0000 UTC m=+1.919745241
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.*uint8]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueUnique).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_unique.go:51
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f6-5	Type: system
+  | Description: Queue: notification-service
+  | Start:       2026-11-15 03:28:54.438627513 +0000 UTC m=+1.919537047
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.struct { IssueID int64; CommentID int64; NotificationAuthorID int64; ReceiverID int64 }]).doRun
+  |   |   | /source/modules/queue/workergroup.go:337
+  |   |   + gitea.dev/modules/queue.(*WorkerPoolQueue[go.shape.struct { IssueID int64; CommentID int64; NotificationAuthorID int64; ReceiverID int64 }]).Run
+  |   |   | /source/modules/queue/workerqueue.go:185
+  |   |   + gitea.dev/modules/graceful.(*Manager).RunWithCancel
+  |   |   | /source/modules/graceful/manager.go:77
+  |   + Description: gitea.dev/modules/queue.popItemByChan.func1
+  |   | Labels:      "graceful_lifecycle":"with-shutdown"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/queue.backoffRetErr[go.shape.[]uint8]
+  |   |   | /source/modules/queue/backoff.go:51
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueueCommonImpl).PopItem
+  |   |   | /source/modules/queue/base_levelqueue_common.go:53
+  |   |   + gitea.dev/modules/queue.(*baseLevelQueue).PopItem
+  |   |   | /source/modules/queue/base_levelqueue.go:55
+  |   |   + gitea.dev/modules/queue.popItemByChan.func1
+  |   |   | /source/modules/queue/base.go:27
+  | 
+  + PID: 6af926f5-7	Type: system
+  | Description: Graceful: HandleSignals
+  | Start:       2026-11-15 03:28:53.697842347 +0000 UTC m=+1.178751873
+  | Goroutines:
+  |   + Description: gitea.dev/modules/graceful.(*Manager).handleSignals
+  |   | Labels:      "graceful_lifecycle":"with-manager"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/modules/graceful.(*Manager).handleSignals
+  |   |   | /source/modules/graceful/manager_unix.go:125
+  | 
+  + PID: 6af926f5-2	Type: system
+  | Description: Service: NoSQL
+  | Start:       2026-11-15 03:28:53.559980923 +0000 UTC m=+1.040890457
+  | Goroutines:
+  |   + Description: github.com/syndtr/goleveldb/leveldb/util.(*BufferPool).drain
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/syndtr/goleveldb/leveldb/util.(*BufferPool).drain
+  |   |   | /go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/util/buffer_pool.go:206
+  |   + Description: github.com/syndtr/goleveldb/leveldb.(*DB).compactionError
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/syndtr/goleveldb/leveldb.(*DB).compactionError
+  |   |   | /go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/db_compaction.go:90
+  |   + Description: github.com/syndtr/goleveldb/leveldb.(*DB).mCompaction
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/syndtr/goleveldb/leveldb.(*DB).mCompaction
+  |   |   | /go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/db_compaction.go:762
+  |   + Description: github.com/syndtr/goleveldb/leveldb.(*DB).tCompaction
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/syndtr/goleveldb/leveldb.(*DB).tCompaction
+  |   |   | /go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/db_compaction.go:825
+  |   + Description: github.com/syndtr/goleveldb/leveldb.(*DB).mpoolDrain
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/syndtr/goleveldb/leveldb.(*DB).mpoolDrain
+  |   |   | /go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/db_state.go:101
+  | 
+  + PID: 6af926f5	Type: system
+  | Description: LoggerManager
+  | Start:       2026-11-15 03:28:53.559291807 +0000 UTC m=+1.040201361
+  | Children:
+  |   + PID: 6af926f6-3	Type: system
+  |   | Description: Logger: router
+  |   | Start:       2026-11-15 03:28:54.155401388 +0000 UTC m=+1.636310913
+  |   + PID: 6af926f6-2	Type: system
+  |   | Description: Logger: access
+  |   | Start:       2026-11-15 03:28:54.155389022 +0000 UTC m=+1.636298558
+  |   + PID: 6af926f6	Type: system
+  |   | Description: Logger: EventWriter (shared): file
+  |   | Start:       2026-11-15 03:28:54.15534778 +0000 UTC m=+1.636257330
+  |   | Goroutines:
+  |   |   + Description: gitea.dev/modules/log.eventWriterStartGo.func1
+  |   |   | Stack:
+  |   |   |   + runtime.gopark
+  |   |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   |   + runtime.selectgo
+  |   |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   |   + gitea.dev/modules/log.(*EventWriterBaseImpl).Run
+  |   |   |   | /source/modules/log/event_writer_base.go:81
+  |   |   |   + gitea.dev/modules/log.eventWriterStartGo.func1
+  |   |   |   | /source/modules/log/event_writer_base.go:157
+  |   + PID: 6af926f5-3	Type: system
+  |   | Description: Logger: default
+  |   | Start:       2026-11-15 03:28:53.559991143 +0000 UTC m=+1.040900685
+  |   + PID: 6af926f6-4	Type: system
+  |   | Description: Logger: xorm
+  |   | Start:       2026-11-15 03:28:54.155408135 +0000 UTC m=+1.636317661
+  | 
+  + PID: 	Type: none
+  | Description: (unassociated)
+  | Start:       0001-01-01 00:00:00 +0000 UTC
+  | Goroutines:
+  |   + Description: net/http.(*persistConn).readLoop* 5
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.netpollblock
+  |   |   | /usr/local/go/src/runtime/netpoll.go:575
+  |   |   + internal/poll.runtime_pollWait
+  |   |   | /usr/local/go/src/runtime/netpoll.go:351
+  |   |   + internal/poll.(*pollDesc).wait
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+  |   |   + internal/poll.(*pollDesc).waitRead
+  |   |   | /usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+  |   |   + internal/poll.(*FD).Read
+  |   |   | /usr/local/go/src/internal/poll/fd_unix.go:165
+  |   |   + net.(*netFD).Read
+  |   |   | /usr/local/go/src/net/fd_posix.go:68
+  |   |   + net.(*conn).Read
+  |   |   | /usr/local/go/src/net/net.go:196
+  |   |   + crypto/tls.(*atLeastReader).Read
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:815
+  |   |   + bytes.(*Buffer).ReadFrom
+  |   |   | /usr/local/go/src/bytes/buffer.go:229
+  |   |   + crypto/tls.(*Conn).readFromUntil
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:837
+  |   |   + crypto/tls.(*Conn).readRecordOrCCS
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:626
+  |   |   + crypto/tls.(*Conn).readRecord
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:588
+  |   |   + crypto/tls.(*Conn).Read
+  |   |   | /usr/local/go/src/crypto/tls/conn.go:1393
+  |   |   + net/http.(*persistConn).Read
+  |   |   | /usr/local/go/src/net/http/transport.go:2174
+  |   |   + bufio.(*Reader).fill
+  |   |   | /usr/local/go/src/bufio/bufio.go:113
+  |   |   + bufio.(*Reader).Peek
+  |   |   | /usr/local/go/src/bufio/bufio.go:152
+  |   |   + net/http.(*persistConn).readLoop
+  |   |   | /usr/local/go/src/net/http/transport.go:2330
+  |   + Description: net/http.(*persistConn).writeLoop* 5
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + net/http.(*persistConn).writeLoop
+  |   |   | /usr/local/go/src/net/http/transport.go:2652
+  |   + Description: github.com/blevesearch/bleve_index_api.AnalysisWorker* 4
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/blevesearch/bleve_index_api.AnalysisWorker
+  |   |   | /go/pkg/mod/github.com/blevesearch/bleve_index_api@v1.3.12/analysis.go:46
+  |   + Description: os/signal.loop
+  |   | Stack:
+  |   |   + runtime.notetsleepg
+  |   |   | /usr/local/go/src/runtime/lock_futex.go:123
+  |   |   + os/signal.signal_recv
+  |   |   | /usr/local/go/src/runtime/sigqueue.go:152
+  |   |   + os/signal.loop
+  |   |   | /usr/local/go/src/os/signal/signal_unix.go:23
+  |   + Description: net/http.(*conn).serve
+  |   | Labels:      "graceful_lifecycle":"with-hammer"
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/hashicorp/go-retryablehttp.(*Client).Do
+  |   |   | /go/pkg/mod/github.com/hashicorp/go-retryablehttp@v0.7.8/client.go:785
+  |   |   + gitlab.com/gitlab-org/api/client-go/v2.(*Client).Do
+  |   |   | /go/pkg/mod/gitlab.com/gitlab-org/api/client-go/v2@v2.42.0/gitlab.go:1210
+  |   |   + gitlab.com/gitlab-org/api/client-go/v2.do[go.shape.*uint8]
+  |   |   | /go/pkg/mod/gitlab.com/gitlab-org/api/client-go/v2@v2.42.0/request_handler.go:267
+  |   |   + gitlab.com/gitlab-org/api/client-go/v2.(*ReleaseLinksService).GetReleaseLink
+  |   |   | /go/pkg/mod/gitlab.com/gitlab-org/api/client-go/v2@v2.42.0/releaselinks.go:75
+  |   |   + gitea.dev/services/migrations.(*GitlabDownloader).convertGitlabRelease.func1
+  |   |   | /source/services/migrations/gitlab.go:327
+  |   |   + gitea.dev/services/migrations.(*GiteaLocalUploader).CreateReleases.func1
+  |   |   | /source/services/migrations/gitea_uploader.go:338
+  |   |   + gitea.dev/services/migrations.(*GiteaLocalUploader).CreateReleases
+  |   |   | /source/services/migrations/gitea_uploader.go:356
+  |   |   + gitea.dev/services/migrations.migrateRepository
+  |   |   | /source/services/migrations/migrate.go:306
+  |   |   + gitea.dev/services/migrations.MigrateRepository
+  |   |   | /source/services/migrations/migrate.go:129
+  |   |   + gitea.dev/routers/api/v1/repo.Migrate.func1
+  |   |   | /source/routers/api/v1/repo/migrate.go:199
+  |   |   + gitea.dev/routers/api/v1/repo.Migrate
+  |   |   | /source/routers/api/v1/repo/migrate.go:210
+  |   |   + reflect.Value.call
+  |   |   | /usr/local/go/src/reflect/value.go:586
+  |   |   + reflect.Value.Call
+  |   |   | /usr/local/go/src/reflect/value.go:369
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:182
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.func1.1
+  |   |   | /source/modules/web/handler.go:189
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/api/v1.Routes.APIContexter.func3.1
+  |   |   | /source/services/context/api.go:269
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*ChainHandler).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/chain.go:31
+  |   |   + github.com/go-chi/chi/v5.(*Mux).routeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:477
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5/middleware.GetHead.func1
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/middleware/get_head.go:37
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:73
+  |   |   + github.com/go-chi/chi/v5.(*Mux).Mount.func1
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:321
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.MaintenanceModeHandler.func2.1
+  |   |   | /source/routers/common/maintenancemode.go:50
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*ChainHandler).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/chain.go:31
+  |   |   + github.com/go-chi/chi/v5.(*Mux).routeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:477
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web/routing.NewRequestInfoHandler.func1.1
+  |   |   | /source/modules/web/routing/requestinfo.go:40
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ForwardedHeadersHandler.ForwardedHeaders.func1.1
+  |   |   | /go/pkg/mod/github.com/chi-middleware/proxy@v1.1.1/middleware.go:37
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.SecurityHeadersHandler.func3.1
+  |   |   | /source/routers/common/middleware.go:60
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.RequestContextHandler.func2.1
+  |   |   | /source/routers/common/middleware.go:103
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/routers/common.ProtocolMiddlewares.ChiRoutePathHandler.func1.1
+  |   |   | /source/routers/common/middleware.go:118
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + gitea.dev/modules/web.toHandlerProvider.wrapHandlerProvider[go.shape.interface { ServeHTTP(net/http.ResponseWriter, *net/http.Request) }].func2.1
+  |   |   | /source/modules/web/handler.go:146
+  |   |   + net/http.HandlerFunc.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:2286
+  |   |   + github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+  |   |   | /go/pkg/mod/github.com/go-chi/chi/v5@v5.3.0/mux.go:90
+  |   |   + gitea.dev/modules/web.(*Router).normalizeRequestPath
+  |   |   | /source/modules/web/router.go:280
+  |   |   + gitea.dev/modules/web.(*Router).ServeHTTP
+  |   |   | /source/modules/web/router.go:215
+  |   |   + net/http.serverHandler.ServeHTTP
+  |   |   | /usr/local/go/src/net/http/server.go:3311
+  |   |   + net/http.(*conn).serve
+  |   |   | /usr/local/go/src/net/http/server.go:2067
+  |   + Description: github.com/go-co-op/gocron/v2.(*executor).start
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/go-co-op/gocron/v2.(*executor).start
+  |   |   | /go/pkg/mod/github.com/go-co-op/gocron/v2@v2.21.2/executor.go:118
+  |   + Description: github.com/go-co-op/gocron/v2.NewScheduler.func1
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + github.com/go-co-op/gocron/v2.NewScheduler.func1
+  |   |   | /go/pkg/mod/github.com/go-co-op/gocron/v2@v2.21.2/scheduler.go:188
+  |   + Description: gitea.dev/cmd.installSignals.func1
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + gitea.dev/cmd.installSignals.func1
+  |   |   | /source/cmd/helper.go:79
+  |   + Description: database/sql.(*DB).connectionOpener
+  |   | Stack:
+  |   |   + runtime.gopark
+  |   |   | /usr/local/go/src/runtime/proc.go:462
+  |   |   + runtime.selectgo
+  |   |   | /usr/local/go/src/runtime/select.go:351
+  |   |   + database/sql.(*DB).connectionOpener
+  |   |   | /usr/local/go/src/database/sql/sql.go:1261

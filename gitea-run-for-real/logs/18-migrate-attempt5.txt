@@ -1,0 +1,6 @@
+$ (attempt 5) 03:29:14 {"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-issues","repo_owner":"tobias","service":"gitlab","issues":true,"pull_requests":false,"labels":false,"milestones":false,"releases":true,"wiki":true}
+--- 03:42:04 attempt 5 still stalled (41/356 asset files, 0 rows); ended by Gitea restart for run 3b
+curl: (52) Empty reply from server
+
+HTTP 000
+elapsed=770s

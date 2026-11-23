@@ -1,0 +1,19 @@
+03:24:01 status 1 issues 0 prs 0 releases 0 comments 0
+03:25:01 status 1 issues 0 prs 0 releases 0 comments 0
+03:26:01 status 1 issues 0 prs 0 releases 0 comments 0
+--- 03:28 container restart killed Gitea during attempt 4; after restarting Gitea:
+{'full_name': 'tobias/eclint-anon', 'empty': False, 'size': 1320} HTTP 200
+repository row: [(3, 'eclint-anon', 1)]
+web page /tobias/eclint-anon: HTTP 200
+Cancel Migration
+Migrating from 
+Migration failed.
+Migration status
+cancel button">
+cancel button">Cancel
+cancel this migration?
+cancel-repo-modal">
+cancel: "Cancel",
+migrate/cancel" method="post">
+task rows: []
+DELETE stuck repo 204

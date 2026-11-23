@@ -1,0 +1,4 @@
+level=info msg="Registering runner, arch=amd64, os=linux, version=v6.0.0."
+level=warning msg="Runner in user-mode."
+level=debug msg="Successfully pinged the Gitea instance server"
+level=info msg="Runner registered successfully."

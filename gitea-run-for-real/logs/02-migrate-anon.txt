@@ -1,0 +1,4 @@
+$ curl -X POST /api/v1/repos/migrate -d '{"clone_addr":"https://gitlab.com/greut/eclint","repo_name":"eclint-anon","repo_owner":"tobias","service":"gitlab","mirror":false,"issues":true,"pull_requests":true,"labels":true,"milestones":true,"releases":true,"wiki":true,"lfs":false}'
+{"message":"Migration failed: clone error: exit status 128 - fatal: unable to access 'https://gitlab.com/greut/eclint.git/': Problem with the SSL CA cert (path? access rights?).","url":"http://127.0.0.1:3000/api/swagger"}
+HTTP 422
+elapsed=0s

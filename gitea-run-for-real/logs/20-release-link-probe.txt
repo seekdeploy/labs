@@ -1,0 +1,22 @@
+release v0.5.2 link 11368119
+HTTP/1.1 200 Connection Established
+HTTP/2 200 
+ratelimit-limit: 500
+ratelimit-name: throttle_unauthenticated_api
+ratelimit-observed: 1
+ratelimit-remaining: 499
+ratelimit-reset: 1794714060
+{"id":11368119,"name":"eclint_Windows_x86_64.tar.gz","url":"https://gitlab.com//-/project/15130865/uploads/028bf02d4c5a0594f161374847611d59/eclint_Windows_x86_64.tar.gz","direct_asset_url":"https://gireleases on page 1: 57 asset links total: 356
+url: https://gitlab.com//-/project/15130865/uploads/028bf02d4c5a0594f161374847611d59/eclint_Windows_x86_64.tar.gz
+HTTP/1.1 200 Connection Established
+HTTP/2 308 
+location: https://gitlab.com/-/project/15130865/uploads/028bf02d4c5a0594f161374847611d59/eclint_Windows_x86_64.tar.gz
+HTTP/2 200 
+ratelimit-limit: 500
+ratelimit-name: throttle_unauthenticated_web
+ratelimit-observed: 1
+ratelimit-remaining: 499
+HTTP/2 200 
+ratelimit-name: throttle_unauthenticated_api
+ratelimit-observed: 1
+ratelimit-remaining: 499
