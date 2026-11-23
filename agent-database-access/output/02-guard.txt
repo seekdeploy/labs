@@ -1,0 +1,19 @@
+2026-11-23T15:07:39Z
+--- before guard
+agent_rw             | update one order       | OK
+agent_rw             | update every order     | BLOCKED: canceling statement due to statement timeout
+agent_rw             | update 10% of orders   | OK
+agent_rw             | update 900 orders      | OK
+--- install guard
+guard installed
+--- after guard
+agent_rw             | update one order       | OK
+agent_rw             | update every order     | BLOCKED: canceling statement due to statement timeout
+agent_rw             | update 10% of orders   | BLOCKED: refusing to UPDATE 100000 rows in orders (limit 1000)
+agent_rw             | update 900 orders      | OK
+agent_rw             | delete one order       | BLOCKED: permission denied for table orders
+postgres             | update one order       | OK
+postgres             | update every order     | BLOCKED: refusing to UPDATE 1000000 rows in orders (limit 1000)
+postgres             | update 10% of orders   | BLOCKED: refusing to UPDATE 100000 rows in orders (limit 1000)
+postgres             | update 900 orders      | OK
+postgres             | delete one order       | OK

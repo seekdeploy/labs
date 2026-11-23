@@ -1,0 +1,16 @@
+2026-11-23T15:09:23Z
+1,pitr_basebackup,1.52
+orders before mistake: 1070000 rows, md5 ae192a12100ffebcbee24e07afcb78af
+recovery target: 2026-11-23 15:09:27.936828+00
+agent_rw UPDATE of 900 rows: committed
+orders after mistake:  1070000 rows, md5 ef96345fe9613118d993dc46d438a8b6
+refunded among id<=900: 900
+WAL segments archived: 228
+1,pitr_restore,1.65
+orders after PITR:     1070000 rows, md5 ae192a12100ffebcbee24e07afcb78af
+VERIFY pitr: orders identical to pre-mistake state
+log: starting point-in-time recovery to 2026-11-23 15:09:27.936828+00
+log: recovery stopping before commit of transaction 886, time 2026-11-23 15:09:28.962758+00
+log: redo done at 0/E270EF40 system usage: CPU: user: 0.06 s, system: 0.04 s, elapsed: 0.22 s
+log: archive recovery complete
+exit=0

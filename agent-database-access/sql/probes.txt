@@ -1,0 +1,15 @@
+read orders|SELECT count(*) FROM orders
+read customer email|SELECT email FROM customers LIMIT 1
+read customer name|SELECT id, name FROM customers LIMIT 1
+update one order|UPDATE orders SET status = 'shipped' WHERE id = 1
+update every order|UPDATE orders SET status = 'refunded'
+update 10% of orders|UPDATE orders SET status = 'refunded' WHERE id % 10 = 0
+update 900 orders|UPDATE orders SET status = 'refunded' WHERE id <= 900
+delete one order|DELETE FROM orders WHERE id = 2
+truncate orders|TRUNCATE orders
+drop table|DROP TABLE orders
+alter table|ALTER TABLE orders ADD COLUMN note text
+create table|CREATE TABLE scratch (id int)
+create role|CREATE ROLE sneaky
+write server file|COPY (SELECT 1) TO '/tmp/ada-probe.txt'
+slow query (10 s)|SELECT pg_sleep(10)

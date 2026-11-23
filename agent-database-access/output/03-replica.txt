@@ -1,0 +1,15 @@
+2026-11-23T15:08:38Z
+1,replica_basebackup,1.96
+waiting for server to start.... done
+server started
+1,replica_start,0.11
+replica in recovery: true
+--- agent_ro and agent_rw against the replica:
+agent_ro             | read orders            | OK
+agent_ro             | update one order       | BLOCKED: cannot execute UPDATE in a read-only transaction
+agent_ro             | drop table             | BLOCKED: cannot execute DROP TABLE in a read-only transaction
+agent_rw             | update one order       | BLOCKED: cannot execute UPDATE in a read-only transaction
+agent_rw             | update 900 orders      | BLOCKED: cannot execute UPDATE in a read-only transaction
+--- lag after inserting 50,000 rows on the primary:
+1,replica_catchup,0.011
+pg_stat_replication replay_lag: 00:00:00.011556

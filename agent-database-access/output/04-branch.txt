@@ -1,0 +1,14 @@
+2026-11-23T15:08:51Z
+NOTICE:  database "shop_branch" does not exist, skipping
+1,branch_create,1.33
+--- agent_rw on the branch (owns orders there):
+agent_rw             | delete one order       | OK
+agent_rw             | truncate orders        | OK
+agent_rw             | alter table            | OK
+agent_rw             | create table           | OK
+--- actually drop orders on the branch, then count on both:
+DETAIL:  drop cascades to view customer_totals
+drop cascades to materialized view monthly_revenue
+branch orders table exists: false
+main orders rows: 1050000
+1,branch_drop,0.21
