@@ -1,0 +1,20 @@
+{"received": "2026-11-23T15:15:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:15:58.367"}
+{"received": "2026-11-23T15:16:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:16:18.368"}
+{"received": "2026-11-23T15:16:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:16:58.369"}
+{"received": "2026-11-23T15:17:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:17:18.369"}
+{"received": "2026-11-23T15:17:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:17:58.369"}
+{"received": "2026-11-23T15:18:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:18:18.370"}
+{"received": "2026-11-23T15:18:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:18:58.371"}
+{"received": "2026-11-23T15:19:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:19:18.372"}
+{"received": "2026-11-23T15:19:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:19:58.372"}
+{"received": "2026-11-23T15:20:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:20:18.372"}
+{"received": "2026-11-23T15:20:58Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:20:58.372"}
+{"received": "2026-11-23T15:21:18Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:21:18.373"}
+{"received": "2026-11-23T15:23:38Z", "receiver_mode": "fail", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:23:38.379"}
+{"received": "2026-11-23T15:24:29Z", "receiver_mode": "fail", "msg": "[target-retries-2] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:24:29.124"}
+{"received": "2026-11-23T15:25:38Z", "receiver_mode": "fail", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:25:38.382"}
+{"received": "2026-11-23T15:25:49Z", "receiver_mode": "fail", "msg": "[target-retries-2] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:25:49.126"}
+{"received": "2026-11-23T15:28:18Z", "receiver_mode": "ok", "msg": "[target-default] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:28:18.387"}
+{"received": "2026-11-23T15:28:49Z", "receiver_mode": "ok", "msg": "[target-retries-2] [\ud83d\udd34 Down] Request failed with status code 503", "status": 0, "heartbeat_time": "2026-11-23 15:28:49.130"}
+{"received": "2026-11-23T15:31:47Z", "receiver_mode": "ok", "msg": "[target-default] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:31:47.384"}
+{"received": "2026-11-23T15:31:48Z", "receiver_mode": "ok", "msg": "[target-retries-2] [\u2705 Up] 200 - OK", "status": 1, "heartbeat_time": "2026-11-23 15:31:48.164"}

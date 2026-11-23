@@ -1,0 +1,334 @@
+Welcome to Uptime Kuma
+Your Node.js version: 22.23.4
+2026-11-23T15:10:26Z [SERVER] INFO: Env: production
+2026-11-23T15:10:26Z [SERVER] INFO: Uptime Kuma Version: 2.5.12
+2026-11-23T15:10:26Z [SERVER] INFO: Loading modules
+2026-11-23T15:10:28Z [SERVER] INFO: Creating express and socket.io instance
+2026-11-23T15:10:28Z [SERVER] INFO: Server Type: HTTP
+2026-11-23T15:10:28Z [SERVER] INFO: Custom hostname: 127.0.0.1
+2026-11-23T15:10:28Z [SERVER] INFO: Data Dir: ../data/
+2026-11-23T15:10:28Z [SETUP-DATABASE] INFO: db-config.json is not found or invalid: ENOENT: no such file or directory, open '../data/db-config.json'
+2026-11-23T15:10:28Z [SETUP-DATABASE] INFO: Starting Setup Database
+2026-11-23T15:10:28Z [SETUP-DATABASE] INFO: Listening on:  http://127.0.0.1:3001
+2026-11-23T15:10:28Z [SETUP-DATABASE] INFO: Waiting for user action...
+2026-11-23T15:11:39Z [SETUP-DATABASE] INFO: Database is configured, close the setup-database server and start the main server now.
+2026-11-23T15:11:39Z [SETUP-DATABASE] INFO: The setup-database server is closed
+2026-11-23T15:11:39Z [DB] INFO: Database Type: sqlite
+2026-11-23T15:11:39Z [SERVER] INFO: Copying Database
+2026-11-23T15:11:39Z [DB] INFO: Using single connection for SQLite
+2026-11-23T15:11:39Z [SERVER] INFO: Connected to the database
+2026-11-23T15:11:39Z [DB] INFO: Your database version: 0
+2026-11-23T15:11:39Z [DB] INFO: Latest database version: 10
+2026-11-23T15:11:39Z [DB] INFO: Database patch is needed
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch1.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch1.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch2.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch2.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch3.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch3.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch4.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch4.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch5.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch5.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch6.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch6.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch7.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch7.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch8.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch8.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch9.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch9.sql
+2026-11-23T15:11:39Z [DB] INFO: Patching ./db/old_migrations/patch10.sql
+2026-11-23T15:11:39Z [DB] INFO: Patched ./db/old_migrations/patch10.sql
+2026-11-23T15:11:39Z [DB] INFO: patch-setting-value-type.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-setting-value-type.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-setting-value-type.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-improve-performance.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-improve-performance.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-improve-performance.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-retry-interval-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-retry-interval-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-retry-interval-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-incident-table.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-incident-table.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-incident-table.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-group-table.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-group-table.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-group-table.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-push_token.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-push_token.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-push_token.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-http-monitor-method-body-and-headers.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-http-monitor-method-body-and-headers.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-http-monitor-method-body-and-headers.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa-invalidate-used-token.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa-invalidate-used-token.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-2fa-invalidate-used-token.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-notification_sent_history.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-notification_sent_history.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-notification_sent_history.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-basic-auth.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-basic-auth.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-basic-auth.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-docker-columns.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-docker-columns.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-docker-columns.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-proxy.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-proxy.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-proxy.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-expiry-notification.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-expiry-notification.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-expiry-notification.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page-footer-css.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page-footer-css.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-status-page-footer-css.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-added-mqtt-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-added-mqtt-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-added-mqtt-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-clickable-status-page-link.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-clickable-status-page-link.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-clickable-status-page-link.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-sqlserver-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-sqlserver-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-sqlserver-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-other-auth.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-other-auth.sql need parents
+2026-11-23T15:11:39Z [DB] INFO: patch-add-other-auth.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-other-auth.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-grpc-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-grpc-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-grpc-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-radius-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-radius-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-radius-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-add-resend-interval.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-add-resend-interval.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-add-resend-interval.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-ping-packet-size.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-ping-packet-size.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-ping-packet-size.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-table2.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-table2.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-table2.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-google-analytics-status-page-tag.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-google-analytics-status-page-tag.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-google-analytics-status-page-tag.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-http-body-encoding.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-http-body-encoding.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-http-body-encoding.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-description-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-description-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-description-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-api-key-table.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-api-key-table.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-api-key-table.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-cron.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-cron.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-maintenance-cron.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-parent-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-parent-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-parent-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-invert-keyword.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-invert-keyword.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-invert-keyword.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-added-json-query.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-added-json-query.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-added-json-query.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-added-kafka-producer.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-added-kafka-producer.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-added-kafka-producer.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-certificate-expiry-status-page.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-certificate-expiry-status-page.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-certificate-expiry-status-page.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-oauth-cc.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-oauth-cc.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-oauth-cc.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-timeout-monitor.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-timeout-monitor.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-timeout-monitor.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-given-port.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-given-port.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-add-gamedig-given-port.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-notification-config.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-notification-config.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-notification-config.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-fix-kafka-producer-booleans.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-fix-kafka-producer-booleans.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-fix-kafka-producer-booleans.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-timeout.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-timeout.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-timeout.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls-info-add-fk.sql is not patched
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls-info-add-fk.sql is patching
+2026-11-23T15:11:39Z [DB] INFO: patch-monitor-tls-info-add-fk.sql was patched successfully
+2026-11-23T15:11:39Z [DB] INFO: Database Patched Successfully
+2026-11-23T15:11:40Z [MIGRATION] INFO: Listening on:  http://127.0.0.1:3001
+2026-11-23T15:11:40Z [DB] INFO: Migrating Aggregate Table
+2026-11-23T15:11:40Z [DB] INFO: Getting list of unique monitors
+2026-11-23T15:11:40Z [DB] INFO: Clearing non-important heartbeats
+2026-11-23T15:11:40Z [DB] INFO: No data to migrate
+2026-11-23T15:11:40Z [SERVER] INFO: JWT secret is not found, generate one.
+2026-11-23T15:11:40Z [SERVER] INFO: Stored JWT secret into database
+2026-11-23T15:11:40Z [SERVER] INFO: No user, need setup
+2026-11-23T15:11:40Z [SERVER] INFO: Listening on:  http://127.0.0.1:3001
+2026-11-23T15:11:40Z [UPDATE-CHECKER] INFO: Failed to check for new versions
+2026-11-23T15:11:57Z [SOCKET] INFO: New websocket connection, IP = 127.0.0.1
+2026-11-23T15:11:57Z [AUTH] INFO: WebSocket with no origin is allowed
+2026-11-23T15:11:57Z [SERVER] INFO: Redirect to setup page
+2026-11-23T15:11:57Z [AUTH] INFO: Login by username + password. IP=127.0.0.1
+2026-11-23T15:11:58Z [AUTH] INFO: Successfully logged in user admin. IP=127.0.0.1
+2026-11-23T15:11:58Z [SOCKET] INFO: New websocket connection, IP = 127.0.0.1
+2026-11-23T15:11:58Z [AUTH] INFO: WebSocket with no origin is allowed
+2026-11-23T15:11:58Z [AUTH] INFO: Login by username + password. IP=127.0.0.1
+2026-11-23T15:11:58Z [AUTH] INFO: Successfully logged in user admin. IP=127.0.0.1
+2026-11-23T15:11:58Z [MANAGE] INFO: Resume Monitor: 1 User ID: 1
+2026-11-23T15:11:58Z [MONITOR] INFO: Added Monitor: 1 User ID: 1
+2026-11-23T15:11:58Z [SOCKET] INFO: New websocket connection, IP = 127.0.0.1
+2026-11-23T15:11:58Z [AUTH] INFO: WebSocket with no origin is allowed
+2026-11-23T15:11:58Z [AUTH] INFO: Login by username + password. IP=127.0.0.1
+2026-11-23T15:11:58Z [AUTH] INFO: Successfully logged in user admin. IP=127.0.0.1
+2026-11-23T15:12:08Z [SOCKET] INFO: New websocket connection, IP = 127.0.0.1
+2026-11-23T15:12:08Z [AUTH] INFO: WebSocket with no origin is allowed
+2026-11-23T15:12:08Z [AUTH] INFO: Login by username + password. IP=127.0.0.1
+2026-11-23T15:12:09Z [AUTH] INFO: Successfully logged in user admin. IP=127.0.0.1
+2026-11-23T15:12:09Z [MANAGE] INFO: Resume Monitor: 2 User ID: 1
+2026-11-23T15:12:09Z [MONITOR] INFO: Added Monitor: 2 User ID: 1
+2026-11-23T15:12:09Z [SOCKET] INFO: New websocket connection, IP = 127.0.0.1
+2026-11-23T15:12:09Z [AUTH] INFO: WebSocket with no origin is allowed
+2026-11-23T15:12:09Z [AUTH] INFO: Login by username + password. IP=127.0.0.1
+2026-11-23T15:12:09Z [AUTH] INFO: Successfully logged in user admin. IP=127.0.0.1
+2026-11-23T15:15:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:15:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:16:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:16:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:16:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:17:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:17:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:17:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:18:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:18:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:18:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:19:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:19:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:19:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:20:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:20:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:20:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:21:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:23:38Z [MONITOR] ERROR: Cannot send notification to local-webhook-pager
+2026-11-23T15:23:38Z [MONITOR] ERROR: Error: Request failed with status code 500 (code=ERR_BAD_RESPONSE) (HTTP 500 Internal Server Error)
+    at Webhook.throwGeneralAxiosError (<uptime-kuma>/server/notification-providers/notification-provider.js:167:15)
+    at Webhook.send (<uptime-kuma>/server/notification-providers/webhook.js:68:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Monitor.sendNotification (<uptime-kuma>/server/model/monitor.js:1512:21)
+    at async beat (<uptime-kuma>/server/model/monitor.js:975:21)
+    at async safeBeat (<uptime-kuma>/server/model/monitor.js:1098:17)
+2026-11-23T15:23:38Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:23:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:23:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:24:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:24:18Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:24:29Z [MONITOR] ERROR: Cannot send notification to local-webhook-pager
+2026-11-23T15:24:29Z [MONITOR] ERROR: Error: Request failed with status code 500 (code=ERR_BAD_RESPONSE) (HTTP 500 Internal Server Error)
+    at Webhook.throwGeneralAxiosError (<uptime-kuma>/server/notification-providers/notification-provider.js:167:15)
+    at Webhook.send (<uptime-kuma>/server/notification-providers/webhook.js:68:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Monitor.sendNotification (<uptime-kuma>/server/model/monitor.js:1512:21)
+    at async beat (<uptime-kuma>/server/model/monitor.js:975:21)
+    at async safeBeat (<uptime-kuma>/server/model/monitor.js:1098:17)
+2026-11-23T15:24:29Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:24:38Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:24:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:24:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:25:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:25:18Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:25:29Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:25:38Z [MONITOR] ERROR: Cannot send notification to local-webhook-pager
+2026-11-23T15:25:38Z [MONITOR] ERROR: Error: Request failed with status code 500 (code=ERR_BAD_RESPONSE) (HTTP 500 Internal Server Error)
+    at Webhook.throwGeneralAxiosError (<uptime-kuma>/server/notification-providers/notification-provider.js:167:15)
+    at Webhook.send (<uptime-kuma>/server/notification-providers/webhook.js:68:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Monitor.sendNotification (<uptime-kuma>/server/model/monitor.js:1512:21)
+    at async beat (<uptime-kuma>/server/model/monitor.js:975:21)
+    at async safeBeat (<uptime-kuma>/server/model/monitor.js:1098:17)
+2026-11-23T15:25:49Z [MONITOR] ERROR: Cannot send notification to local-webhook-pager
+2026-11-23T15:25:49Z [MONITOR] ERROR: Error: Request failed with status code 500 (code=ERR_BAD_RESPONSE) (HTTP 500 Internal Server Error)
+    at Webhook.throwGeneralAxiosError (<uptime-kuma>/server/notification-providers/notification-provider.js:167:15)
+    at Webhook.send (<uptime-kuma>/server/notification-providers/webhook.js:68:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Monitor.sendNotification (<uptime-kuma>/server/model/monitor.js:1512:21)
+    at async beat (<uptime-kuma>/server/model/monitor.js:975:21)
+    at async safeBeat (<uptime-kuma>/server/model/monitor.js:1098:17)
+2026-11-23T15:28:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 1 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:28:18Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:28:29Z [MONITOR] WARN: Monitor #2 'target-retries-2': Pending: Request failed with status code 503 | Max retries: 2 | Retry: 2 | Retry Interval: 20 seconds | Type: http
+2026-11-23T15:28:38Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:28:49Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:28:58Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:29:09Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:29:18Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:29:29Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:29:30Z [SERVER] INFO: Shutdown requested
+2026-11-23T15:29:30Z [SERVER] INFO: Called signal: SIGTERM
+2026-11-23T15:29:30Z [SERVER] INFO: Stopping all monitors
+2026-11-23T15:29:32Z [DB] INFO: Closing the database
+2026-11-23T15:29:34Z [DB] INFO: Database closed
+2026-11-23T15:29:34Z [CLOUDFLARED] INFO: Stop cloudflared
+2026-11-23T15:29:34Z [SERVER] INFO: Graceful shutdown successful!
+Welcome to Uptime Kuma
+Your Node.js version: 22.23.4
+2026-11-23T15:30:04Z [SERVER] INFO: Env: production
+2026-11-23T15:30:05Z [SERVER] INFO: Uptime Kuma Version: 2.5.12
+2026-11-23T15:30:05Z [SERVER] INFO: Loading modules
+2026-11-23T15:30:07Z [SERVER] INFO: Creating express and socket.io instance
+2026-11-23T15:30:07Z [SERVER] INFO: Server Type: HTTP
+2026-11-23T15:30:07Z [SERVER] INFO: Custom hostname: 127.0.0.1
+2026-11-23T15:30:07Z [SERVER] INFO: Data Dir: ../data/
+2026-11-23T15:30:07Z [DB] INFO: Database Type: sqlite
+2026-11-23T15:30:07Z [DB] INFO: Using single connection for SQLite
+2026-11-23T15:30:07Z [SERVER] INFO: Connected to the database
+2026-11-23T15:30:07Z [SERVER] INFO: Listening on:  http://127.0.0.1:3001
+2026-11-23T15:30:07Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:30:08Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:30:08Z [UPDATE-CHECKER] INFO: Failed to check for new versions
+2026-11-23T15:30:27Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:30:28Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:30:47Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:30:48Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:31:07Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:31:08Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:31:27Z [MONITOR] WARN: Monitor #1 'target-default': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:31:28Z [MONITOR] WARN: Monitor #2 'target-retries-2': Failing: Request failed with status code 503 | Interval: 20 seconds | Type: http | Down Count: 0 | Resend Interval: 0
+2026-11-23T15:32:37Z [SERVER] INFO: Shutdown requested
+2026-11-23T15:32:37Z [SERVER] INFO: Called signal: SIGTERM
+2026-11-23T15:32:37Z [SERVER] INFO: Stopping all monitors
+2026-11-23T15:32:39Z [DB] INFO: Closing the database
+2026-11-23T15:32:41Z [DB] INFO: Database closed
+2026-11-23T15:32:41Z [CLOUDFLARED] INFO: Stop cloudflared
+2026-11-23T15:32:41Z [SERVER] INFO: Graceful shutdown successful!
+Welcome to Uptime Kuma
+Your Node.js version: 22.23.4
+2026-11-23T15:34:41Z [SERVER] INFO: Env: production
+2026-11-23T15:34:42Z [SERVER] INFO: Uptime Kuma Version: 2.5.12
+2026-11-23T15:34:42Z [SERVER] INFO: Loading modules
+2026-11-23T15:34:44Z [SERVER] INFO: Creating express and socket.io instance
+2026-11-23T15:34:44Z [SERVER] INFO: Server Type: HTTP
+2026-11-23T15:34:44Z [SERVER] INFO: Custom hostname: 127.0.0.1
+2026-11-23T15:34:44Z [SERVER] INFO: Data Dir: ../data/
+2026-11-23T15:34:44Z [DB] INFO: Database Type: sqlite
+2026-11-23T15:34:44Z [DB] INFO: Using single connection for SQLite
+2026-11-23T15:34:44Z [SERVER] INFO: Connected to the database
+2026-11-23T15:34:45Z [SERVER] INFO: Listening on:  http://127.0.0.1:3001
+2026-11-23T15:34:45Z [UPDATE-CHECKER] INFO: Failed to check for new versions

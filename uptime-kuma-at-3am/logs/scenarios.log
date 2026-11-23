@@ -1,0 +1,17 @@
+2026-11-23T15:13:01Z SCENARIO 1 START flap 30s
+2026-11-23T15:15:08Z SCENARIO 1 ABORTED: flapping target never started (Address already in use), see RUN-LOG
+2026-11-23T15:15:16Z SCENARIO 1 START (retry) flap every 30s for 360s
+2026-11-23T15:22:16Z SCENARIO 1 END
+2026-11-23T15:23:30Z SCENARIO 2 START receiver -> fail (HTTP 500)
+2026-11-23T15:26:35Z receiver -> ok
+2026-11-23T15:27:35Z SCENARIO 2 END
+2026-11-23T15:28:00Z SCENARIO 3 START: Kuma restart during an outage
+2026-11-23T15:29:30Z stopping Kuma (SIGTERM pid 989)
+2026-11-23T15:29:34Z Kuma stopped
+2026-11-23T15:30:07Z Kuma started (pid 2901), log /tmp/claude-0/-home-user-seekdeploy/67ae3593-09cc-5414-96f2-ce37163d380f/scratchpad/kuma/src/../kuma-2.log
+2026-11-23T15:32:37Z SCENARIO 3 END
+2026-11-23T15:32:37Z SCENARIO 4 START: outage while Kuma is down
+2026-11-23T15:32:37Z stopping Kuma (SIGTERM pid 2901)
+2026-11-23T15:32:41Z Kuma stopped
+2026-11-23T15:34:45Z Kuma started (pid 3287), log /tmp/claude-0/-home-user-seekdeploy/67ae3593-09cc-5414-96f2-ce37163d380f/scratchpad/kuma/src/../kuma-3.log
+2026-11-23T15:36:15Z SCENARIO 4 END
